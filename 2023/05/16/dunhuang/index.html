@@ -1,193 +1,254 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"><title>敦煌 | Flyingcat</title><meta name="description" content="敦煌"><meta name="keywords" content="敦煌"><meta name="author" content="Flyingcat"><meta name="copyright" content="Flyingcat"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="https://hm.baidu.com"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="//busuanzi.ibruce.info"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="敦煌"><meta name="twitter:description" content="敦煌"><meta name="twitter:image" content="https://i.imgtg.com/2023/05/18/OM8t8r.jpg"><meta property="og:type" content="article"><meta property="og:title" content="敦煌"><meta property="og:url" content="https://flying-cat.cn/2023/05/16/dunhuang/"><meta property="og:site_name" content="Flyingcat"><meta property="og:description" content="敦煌"><meta property="og:image" content="https://i.imgtg.com/2023/05/18/OM8t8r.jpg"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>const autoChangeMode = 'false'
-var t = Cookies.get("theme");
-if (autoChangeMode == '1'){
-const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
-const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
-const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
-const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
-
-if (t === undefined){
-  if (isLightMode) activateLightMode()
-  else if (isDarkMode) activateDarkMode()
-  else if (isNotSpecified || hasNoSupport){
-    console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
-    now = new Date();
-    hour = now.getHours();
-    isNight = hour < 6 || hour >= 18
-    isNight ? activateDarkMode() : activateLightMode()
-}
-} else if (t == 'light') activateLightMode()
-else activateDarkMode()
-
-
-} else if (autoChangeMode == '2'){
-  now = new Date();
-  hour = now.getHours();
-  isNight = hour < 6 || hour >= 18
-  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
-  else if (t === 'light') activateLightMode()
-  else activateDarkMode() 
-} else {
-  if ( t == 'dark' ) activateDarkMode()
-  else if ( t == 'light') activateLightMode()
-}
-
-function activateDarkMode(){
-  document.documentElement.setAttribute('data-theme', 'dark')
-  if (document.querySelector('meta[name="theme-color"]') !== null){
-    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
-  }
-}
-function activateLightMode(){
-  document.documentElement.setAttribute('data-theme', 'light')
-  if (document.querySelector('meta[name="theme-color"]') !== null){
-  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
-  }
-}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="https://flying-cat.cn/2023/05/16/dunhuang/"><link rel="prev" title="当我夜骑时我在想什么" href="https://flying-cat.cn/2023/07/29/yeqi/"><link rel="next" title="七月" href="https://flying-cat.cn/2021/07/07/%E4%B8%83%E6%9C%88/"><script>var _hmt = _hmt || [];
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>敦煌 | Flyingcat</title><meta name="author" content="Flyingcat"><meta name="copyright" content="Flyingcat"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="文职面试结束后，就想着去趟敦煌，虽说敦煌属于酒泉地区，但路程实在遥远，便想过段时间再说。第二天下午正好我表弟来找我出去转转，我们想了想酒泉附近很多地方都去过，我说不如就去敦煌吧。于是我俩简单收拾了行李，由我弟开车，就这样踏上了去往敦煌的路。 从酒泉到敦煌大概有400公里，开车大概4个小时。我们在路过嘉峪关的时候还在超市买了吃的和喝的，还担心那边会不会物价有点贵，但其实后面发现完全多虑了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="敦煌">
+<meta property="og:url" content="https://flying-cat.cn/2023/05/16/dunhuang/index.html">
+<meta property="og:site_name" content="Flyingcat">
+<meta property="og:description" content="文职面试结束后，就想着去趟敦煌，虽说敦煌属于酒泉地区，但路程实在遥远，便想过段时间再说。第二天下午正好我表弟来找我出去转转，我们想了想酒泉附近很多地方都去过，我说不如就去敦煌吧。于是我俩简单收拾了行李，由我弟开车，就这样踏上了去往敦煌的路。 从酒泉到敦煌大概有400公里，开车大概4个小时。我们在路过嘉峪关的时候还在超市买了吃的和喝的，还担心那边会不会物价有点贵，但其实后面发现完全多虑了">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.imgtg.com/2023/05/18/OM8t8r.jpg">
+<meta property="article:published_time" content="2023-05-16T10:00:00.000Z">
+<meta property="article:modified_time" content="2023-05-18T11:20:32.028Z">
+<meta property="article:author" content="Flyingcat">
+<meta property="article:tag" content="敦煌">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.imgtg.com/2023/05/18/OM8t8r.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://flying-cat.cn/2023/05/16/dunhuang/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
   hm.src = "https://hm.baidu.com/hm.js?d13dfba787b01aee26368a5452ec6f0c";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
-</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/b6dbddb6.js","daovoice")
-daovoice('init', {
-app_id: "42328293"
-});
-daovoice('update');</script><script>var GLOBAL_CONFIG = { 
+</script><script>const GLOBAL_CONFIG = {
   root: '/',
   algolia: undefined,
-  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
-  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"http://www.flying-cat.cn/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
   copy: {
-    success: 'Copy successfully',
-    error: 'Copy error',
-    noSupport: 'The browser does not support'
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
   },
-  bookmark: {
-    title: 'Snackbar.bookmark.title',
-    message_prev: 'Press',
-    message_next: 'to bookmark this page'
+  relativeDate: {
+    homepage: false,
+    post: false
   },
-  runtime_unit: 'days',
-  runtime: true,
+  runtime: 'days',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
   copyright: undefined,
-  ClickShowText: undefined,
-  medium_zoom: false,
-  fancybox: true,
+  lightbox: 'fancybox',
   Snackbar: undefined,
-  baiduPush: false,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '敦煌',
+  isPost: true,
   isHome: false,
-  isPost: true
-  
-}</script><meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Flyingcat" type="application/atom+xml">
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-05-18 19:20:32'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Flyingcat" type="application/atom+xml">
 <link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
 <script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
 <script src="\assets\js\Meting.min.js" class="meting-script-marker"></script>
-</head><body><header> <div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">Flyingcat</a></span><span class="toggle-menu pull_right close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-pencil-square-o"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 其他</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/dplayer/"><i class="fa-fw fa fa-play-circle"></i><span> 短片</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/books/"><i class="fa-fw fa fa-book"></i><span> 图书</span></a></li></ul></div></div></span><span class="pull_right" id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> Search</span></a></span></div></header><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">45</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">30</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">Categories</div><div class="length_num">11</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-pencil-square-o"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 其他</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/dplayer/"><i class="fa-fw fa fa-play-circle"></i><span> 短片</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/books/"><i class="fa-fw fa fa-book"></i><span> 图书</span></a></li></ul></div></div></div><div id="mobile-sidebar-toc"><div class="toc_mobile_headline">Catalog</div><div class="sidebar-toc__content"></div></div></div><div id="body-wrap"><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true">     </i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"></div></div></div><main id="content-outer"><div id="top-container" style="background-image: url(https://i.imgtg.com/2023/05/18/OM8t8r.jpg)"><div id="post-info"><div id="post-title"><div class="posttitle">敦煌</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> Created 2023-05-16<span class="post-meta__separator">|</span><i class="fa fa-history fa-fw" aria-hidden="true"></i> Updated 2023-05-18</time><span class="post-meta__separator">|</span><span><i class="fa fa-inbox post-meta__icon fa-fw" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E6%97%85%E8%A1%8C/">旅行</a></span><div class="post-meta-wordcount"><i class="fa fa-file-word-o post-meta__icon fa-fw" aria-hidden="true"></i><span>Word count:</span><span class="word-count">2.6k</span><span class="post-meta__separator">|</span><i class="fa fa-clock-o post-meta__icon fa-fw" aria-hidden="true"></i><span>Reading time: 7 min</span><div class="post-meta-pv-cv"><span class="post-meta__separator">|</span><span><i class="fa fa-eye post-meta__icon fa-fw" aria-hidden="true"> </i>Post View:</span><span id="busuanzi_value_page_pv"></span></div></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><html><head>
-    </head><body><div id="aplayer-wPtOGfUC" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1957601313" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="none" data-theme="#ad7a86"></div>
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">45</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">30</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">11</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fas fa-pencil-square-o"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 其他</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/dplayer/"><i class="fa-fw fas fa-play-circle"></i><span> 短片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-film"></i><span> 电影</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 图书</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://i.imgtg.com/2023/05/18/OM8t8r.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Flyingcat"><span class="site-name">Flyingcat</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fas fa-pencil-square-o"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 其他</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/dplayer/"><i class="fa-fw fas fa-play-circle"></i><span> 短片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-film"></i><span> 电影</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 图书</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">敦煌</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-05-16T10:00:00.000Z" title="Created 2023-05-16 18:00:00">2023-05-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-05-18T11:20:32.028Z" title="Updated 2023-05-18 19:20:32">2023-05-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%97%85%E8%A1%8C/">旅行</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word Count:</span><span class="word-count">3.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading Time:</span><span>11mins</span></span><span class="post-meta-separator">|</span><span id="" data-flag-title="敦煌"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span class="waline-pageview-count" data-path="/2023/05/16/dunhuang/"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container">
+    <div id="aplayer-YzvZRlZT" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1957601313" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="none" data-theme="#ad7a86"></div>
 <p>文职面试结束后，就想着去趟敦煌，虽说敦煌属于酒泉地区，但路程实在遥远，便想过段时间再说。第二天下午正好我表弟来找我出去转转，我们想了想酒泉附近很多地方都去过，我说不如就去敦煌吧。于是我俩简单收拾了行李，由我弟开车，就这样踏上了去往敦煌的路。</p>
 <p>从酒泉到敦煌大概有400公里，开车大概4个小时。我们在路过嘉峪关的时候还在超市买了吃的和喝的，还担心那边会不会物价有点贵，但其实后面发现完全多虑了，因为那边美食太多了，而且也不贵，我们买的零食和泡面没怎么打开过，一直都放在车里。我们走的连霍高速和柳格高速、中间路过了嘉峪关、玉门、瓜州。沿途玉门那边有风电机、光能发电厂，数量还是很多的。</p>
-<div class="justified-gallery"><p><a href="https://i.imgtg.com/2023/05/18/OM8G5I.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OM8G5I.jpg" alt="" title=""></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OM8Lf1.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OM8Lf1.jpg" alt="" title=""></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OM8DxM.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OM8DxM.jpg" alt="" title=""></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OM8HpG.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OM8HpG.jpg" alt="" title=""></a></p>
-
-          </div>
+<div class="gallery-container" data-type="data" data-button>
+      <div class="gallery-data">[{"url":"https://i.imgtg.com/2023/05/18/OM8G5I.jpg","alt":""},{"url":"https://i.imgtg.com/2023/05/18/OM8Lf1.jpg","alt":""},{"url":"https://i.imgtg.com/2023/05/18/OM8DxM.jpg","alt":""},{"url":"https://i.imgtg.com/2023/05/18/OM8HpG.jpg","alt":""}]</div>
+      <div class="gallery-items">
+      </div>
+    </div>
 <p>到敦煌大概晚上8点多，天还很亮。进入市区给我的第一感觉就是新 ，这里的建筑颜色接近象牙白，顶部是经典的那种红色。街上的行人不多，商场、名牌店、酒菜馆一样不少。我们在酒店附近的敦煌小吃街吃了烧烤，在门店买了杏皮水，也很好喝，后面才觉得和敦煌街头随处卖的杏皮茶口味没什么区别。回到酒店，简单做了点攻略，规划了一下第二天路线。小城的好处就是景点相距不远，鸣沙山月牙泉和莫高窟只隔了10多公里，开车也方便。</p>
 <p>在鸣沙山景区公众号上有列出这个月的日出日落时间，第二天的日出是6点24分。我们大概在5点半出发，50左右到了景区门口，即便是周二，门口也围了一群等待进入景点看日出的人。正常的门票是110元，可以玩三天，酒泉和嘉峪关市民可以免门票。月牙泉在鸣沙山脚下，鸣沙山半环绕着月牙泉。我们顺着一旁的梯子开始爬山。由于想快点儿赶上日出，大家都爬得比较快，但是也很费力。尽管戴了鞋套，鞋里还是进了沙子，不过沙子很细软，并不会让人不舒服。大概20分钟，我们总算是在日出之前爬上了山顶。大家三三俩俩坐在山头，静待着日出。放眼望去，沙漠广袤无垠，远处的太阳在缓缓升起，焕发着生机与活力。蓝天、沙漠、敦煌，日出、这几个词语堆积在一起很难不让人勾勒出一幅绝美画卷。坐在山头、可以什么都不去想、静静地观赏这幅画。月牙泉安静地躺在山的背面，现在太阳的高度并不足以照到它，一眼望去，清澈的蓝。我弟来时还借了同事的无人机，不过这边有滑翔机和直升机项目，都是禁止用无人机的。一旁的姐姐听我们要打算去莫高窟、阳关，询问是否可以搭车，我俩也同意了。随后我们便原路返回，下山轻松多了，如果提前准备滑沙板的话，从这里滑到山脚将会是很不错的体验。</p>
-<div class="justified-gallery"><p><a href="https://i.imgtg.com/2023/05/18/OM83HL.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OM83HL.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OM83HL.jpg" alt="OM83HL.jpg" title="OM83HL.jpg"></a><br>
-<a href="https://i.imgtg.com/2023/05/18/OM8CXi.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OM8CXi.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OM8CXi.jpg" alt="OM8CXi.jpg" title="OM8CXi.jpg"></a><br>
-<a href="https://i.imgtg.com/2023/05/18/OMXalx.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMXalx.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMXalx.jpg" alt="OMXalx.jpg" title="OMXalx.jpg"></a><br>
-<a href="https://i.imgtg.com/2023/05/18/OMXMxX.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMXMxX.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMXMxX.jpg" alt="OMXMxX.jpg" title="OMXMxX.jpg"></a><br>
-<a href="https://i.imgtg.com/2023/05/18/OMXOJt.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMXOJt.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMXOJt.jpg" alt="OMXOJt.jpg" title="OMXOJt.jpg"></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMXnT1.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMXnT1.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMXnT1.jpg" alt="OMXnT1.jpg" title="OMXnT1.jpg"></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMXqBj.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMXqBj.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMXqBj.jpg" alt="OMXqBj.jpg" title="OMXqBj.jpg"></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMXUMY.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMXUMY.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMXUMY.jpg" alt="OMXUMY.jpg" title="OMXUMY.jpg"></a><a href="https://i.imgtg.com/2023/05/18/OMX5Zp.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMX5Zp.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMX5Zp.jpg" alt="OMX5Zp.jpg" title="OMX5Zp.jpg"></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMXkXc.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMXkXc.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMXkXc.jpg" alt="OMXkXc.jpg" title="OMXkXc.jpg"></a><a href="https://i.imgtg.com/2023/05/18/OMXBcU.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMXBcU.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMXBcU.jpg" alt="OMXBcU.jpg" title="OMXBcU.jpg"></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMXFPM.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMXFPM.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMXFPM.jpg" alt="OMXFPM.jpg" title="OMXFPM.jpg"></a><br>
-<a href="https://i.imgtg.com/2023/05/18/OMXhlG.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMXhlG.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMXhlG.jpg" alt="OMXhlG.jpg" title="OMXhlG.jpg"></a></p>
-
-          </div>
+<div class="gallery-container" data-type="data" data-button>
+      <div class="gallery-data">[{"url":"https://i.imgtg.com/2023/05/18/OM83HL.jpg","alt":"OM83HL.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OM8CXi.jpg","alt":"OM8CXi.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMXalx.jpg","alt":"OMXalx.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMXMxX.jpg","alt":"OMXMxX.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMXOJt.jpg","alt":"OMXOJt.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMXnT1.jpg","alt":"OMXnT1.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMXqBj.jpg","alt":"OMXqBj.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMXUMY.jpg)![OMX5Zp.jpg](https://i.imgtg.com/2023/05/18/OMX5Zp.jpg","alt":"OMXUMY.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMXkXc.jpg)![OMXBcU.jpg](https://i.imgtg.com/2023/05/18/OMXBcU.jpg","alt":"OMXkXc.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMXFPM.jpg","alt":"OMXFPM.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMXhlG.jpg","alt":"OMXhlG.jpg"}]</div>
+      <div class="gallery-items">
+      </div>
+    </div>
 <p>随后我们先开车回了酒店，去旁边面馆吃了牛肉面，味道也相当好。接着便去往莫高窟方向。路上，那位姐姐说自己是厦门工作，一路坐着卧铺从天水到旅行到了敦煌，中间去了麦积山，张掖的七彩丹霞、平山湖大峡谷、嘉峪关悬壁长城等很多景点，她说看到这些风景让她感到激动，以至于晚上都有点睡不着。到达莫高窟，进去先是观看介绍莫高窟由来的记录片，然后去了另一个8k球幕影院看了几个著名的窟的数字影像。随后乘坐景区大巴走了15公里的路程，终于抵达了莫高窟。人依旧很多，我们排队大概10分钟，讲解员会把人群分为几组，每租人都会分配一名讲解员，然后带领队伍去参观8个窟，每个讲解员的路线都是不一样的，这8个窟中有两个窟是每组必看的，其他的窟都是跟随讲解员的路线来参观。为保护壁画，窟内是禁止拍照的。每个窟都有其独特的风格，年代均有超过1000年。这些洞窟给我留下印象最深就是它的颜色，大学时期我的导师有做过敦煌壁画风格转化的一些项目，那时就觉得把风景转换为壁画的风格很独特，也很有新意。现在亲眼看到它的色彩搭配，不得不佩服古人的独特的审美和以及精湛的技艺。其中17号敦煌藏经洞是必去的一个窟。讲解员说这个窟是当年王道长偶然间发现的，不过他并没有意识到洞窟内藏品艺术的价值所在，把其中一些经书等送给了当地的官员。据统计，内部共有5万余件文物，为保护文物，有人特意将这个洞封存了起来，直到900多年以后被王道长发现。遗憾的是，在1905年后，先后有英国，法国、日本等国家的人以低廉的价格从王道长手中骗取文物4万余件。现在洞内并没有什么经书文物，中间只是端坐着洪辩高僧塑像，身后的壁画里两棵菩提树和树下两位侍者。参观完后心中也为此感到可惜，讲解员说现在文物的保护工作任重道远，不能保证这些壁画在几十年后仍然可以保存，现在可行的方法就是打造数字影像，但成本也很大，完成一幅壁画成像的时间需要三到五年。</p>
 <p>如果对敦煌内洞窟感兴趣的话可以去下面的数字敦煌网站看看。<br>
-<a href="https://www.e-dunhuang.com/index.ht" target="_blank" rel="noopener">https://www.e-dunhuang.com/index.ht</a></p>
-<div class="justified-gallery"><p><a href="https://i.imgtg.com/2023/05/18/OMXyPg.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMXyPg.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMXyPg.jpg" alt="OMXyPg.jpg" title="OMXyPg.jpg"></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMXPda.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMXPda.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMXPda.jpg" alt="OMXPda.jpg" title="OMXPda.jpg"></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMXr76.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMXr76.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMXr76.jpg" alt="OMXr76.jpg" title="OMXr76.jpg"></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMXvzl.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMXvzl.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMXvzl.jpg" alt="OMXvzl.jpg" title="OMXvzl.jpg"></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMXKub.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMXKub.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMXKub.jpg" alt="OMXKub.jpg" title="OMXKub.jpg"></a></p>
-<p><a href="https://pic2.imgdb.cn/item/646608ed0d2dde5777486dde.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="" class="fancybox"><img src="https://pic2.imgdb.cn/item/646608ed0d2dde5777486dde.jpg" alt="" title=""></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMXALP.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMXALP.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMXALP.jpg" alt="OMXALP.jpg" title="OMXALP.jpg"></a></p>
-
-          </div>
+<a target="_blank" rel="noopener" href="https://www.e-dunhuang.com/index.ht">https://www.e-dunhuang.com/index.ht</a></p>
+<div class="gallery-container" data-type="data" data-button>
+      <div class="gallery-data">[{"url":"https://i.imgtg.com/2023/05/18/OMXyPg.jpg","alt":"OMXyPg.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMXPda.jpg","alt":"OMXPda.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMXr76.jpg","alt":"OMXr76.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMXvzl.jpg","alt":"OMXvzl.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMXKub.jpg","alt":"OMXKub.jpg"},{"url":"https://pic2.imgdb.cn/item/646608ed0d2dde5777486dde.jpg","alt":""},{"url":"https://i.imgtg.com/2023/05/18/OMXALP.jpg","alt":"OMXALP.jpg"}]</div>
+      <div class="gallery-items">
+      </div>
+    </div>
 <p>参观完莫高窟后已是2点，回到市区，我们去了网上推荐的顺张驴肉黄面馆，味道很棒，很符合我这种面食爱好者的口味。吃过饭，便出发去了阳关。阳关和玉门关都属于这边的重要关口，我们打算先去阳关，然后再去玉门关。从市区到阳关路程大概50公里，沿途有一列列整齐的葡萄架。阳关门票半价35元，进入后可以选择骑马（收费），也可以坐游览车一路送到阳关旧址。阳关遗迹在微风不动声色，从远处看去宛如沉默的人像在凝望着宇宙。远处的戈壁显得十分荒凉，在历史剧中往往能看到边塞驻扎的军队，帐篷外风声不断。物是人非，风声却从未停止它的低语。</p>
-<div class="justified-gallery"><p><a href="https://i.imgtg.com/2023/05/18/OMuzGN.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMuzGN.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMuzGN.jpg" alt="OMuzGN.jpg" title="OMuzGN.jpg"></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMuFIC.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMuFIC.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMuFIC.jpg" alt="OMuFIC.jpg" title="OMuFIC.jpg"></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMu1jX.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMu1jX.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMu1jX.jpg" alt="OMu1jX.jpg" title="OMu1jX.jpg"></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMuegx.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMuegx.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMuegx.jpg" alt="OMuegx.jpg" title="OMuegx.jpg"></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMuihL.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMuihL.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMuihL.jpg" alt="OMuihL.jpg" title="OMuihL.jpg"></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMunti.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMunti.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMunti.jpg" alt="OMunti.jpg" title="OMunti.jpg"></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMukoa.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMukoa.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMukoa.jpg" alt="OMukoa.jpg" title="OMukoa.jpg"></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMuUys.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMuUys.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMuUys.jpg" alt="OMuUys.jpg" title="OMuUys.jpg"></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMuNWt.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMuNWt.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMuNWt.jpg" alt="OMuNWt.jpg" title="OMuNWt.jpg"></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMuxeS.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMuxeS.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMuxeS.jpg" alt="OMuxeS.jpg" title="OMuxeS.jpg"></a></p>
-
-          </div>
+<div class="gallery-container" data-type="data" data-button>
+      <div class="gallery-data">[{"url":"https://i.imgtg.com/2023/05/18/OMuzGN.jpg","alt":"OMuzGN.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMuFIC.jpg","alt":"OMuFIC.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMu1jX.jpg","alt":"OMu1jX.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMuegx.jpg","alt":"OMuegx.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMuihL.jpg","alt":"OMuihL.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMunti.jpg","alt":"OMunti.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMukoa.jpg","alt":"OMukoa.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMuUys.jpg","alt":"OMuUys.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMuNWt.jpg","alt":"OMuNWt.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMuxeS.jpg","alt":"OMuxeS.jpg"}]</div>
+      <div class="gallery-items">
+      </div>
+    </div>
 <p>参观结束后，大概5点左右 。由于开车太累加早晨早起，我们在停车区休息了一个多小时，准备去往玉门关，然而后面的姐姐网上购买门票时发现，7点就要闭园了。原本计划在玉门关看日落，现在不知去哪。我们就开着车沿着附近公路走了走，去了阳关镇，又去了附近的寿昌城遗址。那里其实没怎么被开发过，只有几处被风沙风化的寿昌城墙。</p>
 <p>我们慢慢悠悠地往市区驶去，中途我们转入了一条小路，在这里飞了一会无人机。8点半左右，我们在戈壁上见证了日落。以前我说过在杭州就算是日落感觉也很具有生命力。在这里似乎更多的是一种热烈的生命即将消逝的感觉，多了一份悲凉与沉重。在黄昏中，远处的货车载着落日在公路上狂奔。我们三个人在戈壁滩上坐了半个钟头，就这样，我们告别了今天的落日。</p>
-<div class="justified-gallery"><p><a href="https://i.imgtg.com/2023/05/18/OMulqK.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMulqK.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMulqK.jpg" alt="OMulqK.jpg" title="OMulqK.jpg"></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMuYVs.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMuYVs.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMuYVs.jpg" alt="OMuYVs.jpg" title="OMuYVs.jpg"></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMusbg.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMusbg.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMusbg.jpg" alt="OMusbg.jpg" title="OMusbg.jpg"></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMuSiP.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMuSiP.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMuSiP.jpg" alt="OMuSiP.jpg" title="OMuSiP.jpg"></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMu04b.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMu04b.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMu04b.jpg" alt="OMu04b.jpg" title="OMu04b.jpg"></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMuEQF.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMuEQF.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMuEQF.jpg" alt="OMuEQF.jpg" title="OMuEQF.jpg"></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMuG36.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMuG36.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMuG36.jpg" alt="OMuG36.jpg" title="OMuG36.jpg"></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMu4V1.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMu4V1.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMu4V1.jpg" alt="OMu4V1.jpg" title="OMu4V1.jpg"></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMuHoI.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMuHoI.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMuHoI.jpg" alt="OMuHoI.jpg" title="OMuHoI.jpg"></a></p>
-<p><a href="https://i.imgtg.com/2023/05/18/OMu8iC.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMu8iC.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMu8iC.jpg" alt="OMu8iC.jpg" title="OMu8iC.jpg"></a></p>
-
-          </div>
+<div class="gallery-container" data-type="data" data-button>
+      <div class="gallery-data">[{"url":"https://i.imgtg.com/2023/05/18/OMulqK.jpg","alt":"OMulqK.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMuYVs.jpg","alt":"OMuYVs.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMusbg.jpg","alt":"OMusbg.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMuSiP.jpg","alt":"OMuSiP.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMu04b.jpg","alt":"OMu04b.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMuEQF.jpg","alt":"OMuEQF.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMuG36.jpg","alt":"OMuG36.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMu4V1.jpg","alt":"OMu4V1.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMuHoI.jpg","alt":"OMuHoI.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMu8iC.jpg","alt":"OMu8iC.jpg"}]</div>
+      <div class="gallery-items">
+      </div>
+    </div>
 <p>还想在戈壁上看星空，但是这边天黑的太慢，一时半会也看不到星星，再加上今天太累了，于是作罢。晚上我们去了靖远尕六羊羔肉，这也是来敦煌必打卡的店。晚上10点我们前面依旧还有9个人在排队，不过由于上菜的速度很快，20分钟后就轮到了我们。我们在服务员的推荐下点了胡羊焖饼、孜然羊排，还有两个热菜，味道一绝！</p>
-<div class="justified-gallery"><p><a href="https://i.imgtg.com/2023/05/18/OMIOqj.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMIOqj.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMIOqj.jpg" alt="OMIOqj.jpg" title="OMIOqj.jpg"></a><br>
-<a href="https://i.imgtg.com/2023/05/18/OMuwYx.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMuwYx.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMuwYx.jpg" alt="OMuwYx.jpg" title="OMuwYx.jpg"></a><br>
-<a href="https://i.imgtg.com/2023/05/18/OMuu6i.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMuu6i.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMuu6i.jpg" alt="OMuu6i.jpg" title="OMuu6i.jpg"></a><br>
-<a href="https://i.imgtg.com/2023/05/18/OMu3bX.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMu3bX.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMu3bX.jpg" alt="OMu3bX.jpg" title="OMu3bX.jpg"></a><br>
-<a href="https://i.imgtg.com/2023/05/18/OMuCmt.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMuCmt.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMuCmt.jpg" alt="OMuCmt.jpg" title="OMuCmt.jpg"></a><br>
-<a href="https://i.imgtg.com/2023/05/18/OMIaAp.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMIaAp.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMIaAp.jpg" alt="OMIaAp.jpg" title="OMIaAp.jpg"></a><br>
-<a href="https://i.imgtg.com/2023/05/18/OMIoSU.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMIoSU.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMIoSU.jpg" alt="OMIoSU.jpg" title="OMIoSU.jpg"></a><br>
-<a href="https://i.imgtg.com/2023/05/18/OMIqCY.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMIqCY.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMIqCY.jpg" alt="OMIqCY.jpg" title="OMIqCY.jpg"></a></p>
-
-          </div>
+<div class="gallery-container" data-type="data" data-button>
+      <div class="gallery-data">[{"url":"https://i.imgtg.com/2023/05/18/OMIOqj.jpg","alt":"OMIOqj.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMuwYx.jpg","alt":"OMuwYx.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMuu6i.jpg","alt":"OMuu6i.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMu3bX.jpg","alt":"OMu3bX.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMuCmt.jpg","alt":"OMuCmt.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMIaAp.jpg","alt":"OMIaAp.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMIoSU.jpg","alt":"OMIoSU.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMIqCY.jpg","alt":"OMIqCY.jpg"}]</div>
+      <div class="gallery-items">
+      </div>
+    </div>
 <p>回到酒店已经是晚上11点多，我在等我弟洗漱的时候已经在床上睡着了，再次醒来已经是第二天早晨六点多，昨天实在是累。八点多我们去了附近的夏家合汁，点了招牌的羊肉合汁，里面的料很足，味道也很鲜美。本来打算今天还要去敦煌书局和敦煌博物馆，不过我弟下午临时有事，于是吃过早点我们就踏上了回家的路。路上的风景也不错，经过了双塔水库，感觉也很棒。</p>
-<div class="justified-gallery"><p><a href="https://i.imgtg.com/2023/05/18/OMIBnv.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMIBnv.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMIBnv.jpg" alt="OMIBnv.jpg" title="OMIBnv.jpg"></a><br>
-<a href="https://i.imgtg.com/2023/05/18/OMITDq.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMITDq.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMITDq.jpg" alt="OMITDq.jpg" title="OMITDq.jpg"></a><br>
-<a href="https://i.imgtg.com/2023/05/18/OMIU6c.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMIU6c.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMIU6c.jpg" alt="OMIU6c.jpg" title="OMIU6c.jpg"></a><br>
-<a href="https://i.imgtg.com/2023/05/18/OMIbkr.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="OMIbkr.jpg" class="fancybox"><img src="https://i.imgtg.com/2023/05/18/OMIbkr.jpg" alt="OMIbkr.jpg" title="OMIbkr.jpg"></a></p>
-
-          </div>
+<div class="gallery-container" data-type="data" data-button>
+      <div class="gallery-data">[{"url":"https://i.imgtg.com/2023/05/18/OMIBnv.jpg","alt":"OMIBnv.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMITDq.jpg","alt":"OMITDq.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMIU6c.jpg","alt":"OMIU6c.jpg"},{"url":"https://i.imgtg.com/2023/05/18/OMIbkr.jpg","alt":"OMIbkr.jpg"}]</div>
+      <div class="gallery-items">
+      </div>
+    </div>
 <p>总的来说这一趟很值得，这次由于时间紧，似乎有点接近特种兵式旅行了。不过感觉敦煌游玩的话两三天就足够了，第一天去敦煌城附近的鸣沙山、莫高窟、敦煌书局、敦煌博物馆，这些景点离市区很近，景点之间相距也不远。第二天可以沿着西线经过西千佛城、阳关、玉门关、雅丹国家地质公园，晚上回来的时候顺便可以在戈壁上看星空。如果走西线的话还是挺推荐租车或者自驾游，那种在戈壁滩上开车的感觉超级棒！</p>
-</body></html></div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Flyingcat</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://flying-cat.cn/2023/05/16/dunhuang/">https://flying-cat.cn/2023/05/16/dunhuang/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%A6%E7%85%8C/">敦煌    </a></div><div class="post_share"><div class="social-share" data-image="https://i.imgtg.com/2023/05/18/OM8t8r.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/wechat.jpg" alt="微信"><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/alipay.jpg" alt="支付寶"><div class="post-qr-code__desc">支付寶</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/2023/07/29/yeqi/"><img class="prev_cover lazyload" data-src="https://s1.ax1x.com/2023/08/12/pPudtHg.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">Previous Post</div><div class="prev_info"><span>当我夜骑时我在想什么</span></div></a></div><div class="next-post pull_right"><a href="/2021/07/07/%E4%B8%83%E6%9C%88/"><img class="next_cover lazyload" data-src="https://cdn.jsdelivr.net/gh/fly1103/For_Blog@master/DSC01802.JPG" onerror="onerror=null;src='/img/404.jpg'"><div class="label">Next Post</div><div class="next_info"><span>七月</span></div></a></div></nav><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> Comment</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = false == true ? true : false;
-var verify = false == true ? true : false;
-var GUEST_INFO = ['nick','mail','link'];
-var guest_info = 'nick,mail,link'.split(',').filter(function(item){
-  return GUEST_INFO.indexOf(item) > -1
-});
-guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://flying-cat.cn">Flyingcat</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://flying-cat.cn/2023/05/16/dunhuang/">https://flying-cat.cn/2023/05/16/dunhuang/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%A6%E7%85%8C/">敦煌</a></div><div class="post_share"><div class="social-share" data-image="https://i.imgtg.com/2023/05/18/OM8t8r.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>Sponsor</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/07/29/yeqi/" title="当我夜骑时我在想什么"><img class="cover" src="https://s1.ax1x.com/2023/08/12/pPudtHg.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous</div><div class="prev_info">当我夜骑时我在想什么</div></div></a></div><div class="next-post pull-right"><a href="/2021/07/07/%E4%B8%83%E6%9C%88/" title="七月"><img class="cover" src="https://cdn.jsdelivr.net/gh/fly1103/For_Blog@master/DSC01802.JPG" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next</div><div class="next_info">七月</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Flyingcat</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">45</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">30</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/fly1103" target="_blank" title=""><i class="fa fa-github"></i></a><a class="social-icon" href="mailto:fly1103q@gmail.com" target="_blank" title=""><i class="fa fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title=""><i class="fa fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">感謝訪問本站，若喜歡請收藏 ^_^</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/05/13/2026/" title="2026"><img src="https://cloudflare-imgbed-et7.pages.dev/file/1778723672202_pexels-introspectivedsgn-12973620.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026"/></a><div class="content"><a class="title" href="/2026/05/13/2026/" title="2026">2026</a><time datetime="2026-05-13T10:23:19.000Z" title="Created 2026-05-13 18:23:19">2026-05-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/27/5%E6%9C%88/" title="Untitled">Untitled</a><time datetime="2024-05-27T13:58:56.699Z" title="Created 2024-05-27 21:58:56">2024-05-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/03/19/spring/" title="三月 大家在花中寻找春天"><img src="https://g.imgtg.com/uploads/5325/65f955a2c2dc1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="三月 大家在花中寻找春天"/></a><div class="content"><a class="title" href="/2024/03/19/spring/" title="三月 大家在花中寻找春天">三月 大家在花中寻找春天</a><time datetime="2024-03-19T14:00:00.000Z" title="Created 2024-03-19 22:00:00">2024-03-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/04/12yue/" title="12月及新的一年"><img src="https://g.imgtg.com/uploads/5325/6596c8b0b11f6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="12月及新的一年"/></a><div class="content"><a class="title" href="/2024/01/04/12yue/" title="12月及新的一年">12月及新的一年</a><time datetime="2024-01-04T15:00:00.000Z" title="Created 2024-01-04 23:00:00">2024-01-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/12/14/11yue/" title="一些绵绵絮语"><img src="https://g.imgtg.com/uploads/5325/66436bb7e7761.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一些绵绵絮语"/></a><div class="content"><a class="title" href="/2023/12/14/11yue/" title="一些绵绵絮语">一些绵绵絮语</a><time datetime="2023-12-14T15:00:00.000Z" title="Created 2023-12-14 23:00:00">2023-12-14</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2026 By Flyingcat</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a href="https://flying-cat.cn/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="Toggle Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="/js/tw_cn.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
 
-window.valine = new Valine({
-  el:'#vcomment',
-  notify:notify,
-  verify:verify,
-  appId:'EhtEm153PX5ncEwIG1jJjeVr-gzGzoHsz',
-  appKey:'1vf297S5tpJ5uFcoWzcTpLaJ',
-  placeholder:'Please leave your footprints',
-  avatar:'monsterid',
-  guest_info:guest_info,
-  pageSize:'10',
-  lang:'en',
-  recordIP: true
-});</script></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2026 By Flyingcat</div><div class="framework-info"><span>Driven </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div><div class="footer_custom_text">Hi, welcome to my <a href="http://flying-cat.cn/">blog</a>!</div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="Read Mode"></i><i class="fa fa-plus" id="font_plus" title="Increase font size"></i><i class="fa fa-minus" id="font_minus" title="Decrease font size"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="Traditional Chinese and Simplified Chinese Conversion" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="Dark Mode"></i></div><div id="rightside-config-show"><div id="rightside_config" title="Setting"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="Scroll to comment"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="Table of Contents" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="Back to top" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script id="ribbon_piao" mobile="true" src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/piao.js"></script><script src="https://cdn.jsdelivr.net/npm/activate-power-mode/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
-POWERMODE.shake = true; 
-document.body.addEventListener('input', POWERMODE);
-</script><script src="/js/tw_cn.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body></html>
+  const initWaline = (Fn) => {
+    const waline = Fn(Object.assign({
+      el: '#waline-wrap',
+      serverURL: 'https://waline-orpin-nine.vercel.app',
+      pageview: true,
+      dark: 'html[data-theme="dark"]',
+      path: window.location.pathname,
+      comment: false,
+    }, null))
+
+    const destroyWaline = () => {
+      waline.destroy()
+    }
+
+    btf.addGlobalFn('pjax', destroyWaline, 'destroyWaline')
+  }
+
+  const loadWaline = async () => {
+    if (initFn) initWaline(initFn)
+    else {
+      await getCSS('https://cdn.jsdelivr.net/npm/@waline/client@3.1.2/dist/waline.min.css')
+      const { init } = await import('https://cdn.jsdelivr.net/npm/@waline/client@3.1.2/dist/waline.min.js')
+      initFn = init || Waline.init
+      initWaline(initFn)
+      window.walineFn = initFn
+    }
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.13.0"></script></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body></html>
