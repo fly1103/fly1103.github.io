@@ -1,14 +1,14 @@
 /* 手机端侧边栏宽度调整 */
 @media screen and (max-width: 768px) {
-  #sidebar #sidebar-menus,
-  #mobile-sidebar-menus {
-    width: 78vw !important;
-    max-width: 320px !important;
-    min-width: 260px !important;
+  #sidebar {
+    width: 65vw !important;
+    max-width: 280px !important;
+    min-width: 230px !important;
   }
 
-  #sidebar {
-    width: 70vw !important;
-    max-width: 300px !important;
+  #sidebar #sidebar-menus,
+  #mobile-sidebar-menus {
+    width: 100% !important;
+    max-width: 280px !important;
   }
 }
