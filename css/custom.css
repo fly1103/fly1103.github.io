@@ -439,3 +439,41 @@
     transform: translateY(2px) !important;
   }
 }
+
+/* ==============================
+   修复手机端点击搜索框自动放大
+   ============================== */
+@media screen and (max-width: 768px) {
+
+  /* Butterfly 本地搜索 / Algolia 搜索输入框 */
+  #local-search-input,
+  #algolia-search-input,
+  .search-dialog input,
+  .search-dialog .search-box input,
+  .search-box input,
+  input[type="search"],
+  input[type="text"] {
+    font-size: 16px !important;
+  }
+
+  /* 搜索弹窗宽度修正，避免移动端贴边/溢出 */
+  .search-dialog {
+    width: calc(100vw - 32px) !important;
+    max-width: calc(100vw - 32px) !important;
+    margin: 0 auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 搜索框本身 */
+  .search-dialog .search-box {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .search-dialog .search-box input {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
