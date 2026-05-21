@@ -403,7 +403,7 @@
 }
 
 /* ==============================
-   顶部导航栏左上角透明猫 Logo
+   顶部导航栏左上角透明猫 Logo 最终版
    ============================== */
 #nav #site-name {
   display: flex !important;
@@ -411,29 +411,31 @@
 }
 
 #nav #site-name img {
-  width: 42px !important;
-  height: 42px !important;
+  width: 48px !important;
+  height: 48px !important;
 
   object-fit: contain !important;
   object-position: center center !important;
 
-  /* 透明 PNG 不要圆形裁剪，不要白底 */
   border-radius: 0 !important;
   padding: 0 !important;
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
 
-  /* 只保留一点阴影，让白色封面上也看得清 */
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.22)) !important;
+  margin-left: 4px !important;
+  transform: translateY(2px) !important;
 
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.24)) !important;
   vertical-align: middle !important;
 }
 
-/* 手机端稍微小一点 */
+/* 手机端 */
 @media screen and (max-width: 768px) {
   #nav #site-name img {
-    width: 38px !important;
-    height: 38px !important;
+    width: 44px !important;
+    height: 44px !important;
+    margin-left: 4px !important;
+    transform: translateY(2px) !important;
   }
 }
