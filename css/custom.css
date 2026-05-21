@@ -144,3 +144,161 @@
     color: #34495e !important;
   }
 }
+
+/* ==============================
+   手机侧边栏二次美化
+   ============================== */
+@media screen and (max-width: 768px) {
+
+  /* 侧边栏背景更柔和一点 */
+  #sidebar {
+    background:
+      radial-gradient(circle at 50% 0%, rgba(73, 177, 245, 0.18), transparent 34%),
+      linear-gradient(180deg, #ffffff 0%, #f7fbff 52%, #eef8ff 100%) !important;
+  }
+
+  /* 头像区域居中 */
+  #sidebar #sidebar-menus .author-avatar,
+  #sidebar .author-avatar {
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* 头像：圆形版 */
+  #sidebar .avatar-img,
+  #sidebar img.avatar-img,
+  #sidebar .author-avatar img {
+    width: 118px !important;
+    height: 118px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    padding: 5px !important;
+    background: #fff !important;
+    border: 3px solid rgba(255, 255, 255, 0.95) !important;
+    box-shadow:
+      0 10px 28px rgba(73, 177, 245, 0.32),
+      0 0 0 8px rgba(73, 177, 245, 0.08) !important;
+  }
+
+  /*
+  如果你想改成方形圆角头像，把上面的 border-radius: 50% 注释掉，
+  然后启用下面这一行：
+  */
+  /*
+  #sidebar .avatar-img,
+  #sidebar img.avatar-img,
+  #sidebar .author-avatar img {
+    border-radius: 26px !important;
+  }
+  */
+
+  /* 用户名更精致 */
+  #sidebar .site-name {
+    margin-top: 14px !important;
+    margin-bottom: 8px !important;
+    font-size: 1.45rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.3px !important;
+    color: #263747 !important;
+  }
+
+  /* 统计卡片更像独立模块 */
+  #sidebar .site-data {
+    width: 92% !important;
+    margin: 20px auto 18px !important;
+    padding: 16px 10px !important;
+    border-radius: 22px !important;
+    background: rgba(255, 255, 255, 0.86) !important;
+    box-shadow:
+      0 10px 28px rgba(73, 177, 245, 0.12),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.65) !important;
+  }
+
+  #sidebar .site-data .headline {
+    font-size: 0.95rem !important;
+    color: #607080 !important;
+  }
+
+  #sidebar .site-data .length-num {
+    font-size: 1.55rem !important;
+    font-weight: 800 !important;
+    color: #203040 !important;
+  }
+
+  /* 剪刀分割线缩短，不要铺满 */
+  #sidebar hr {
+    width: 88% !important;
+    margin: 20px auto !important;
+    border: none !important;
+    border-top: 2px dashed rgba(73, 177, 245, 0.35) !important;
+  }
+
+  /* 菜单区域 */
+  #sidebar .menus_items {
+    width: 92% !important;
+    margin: 0 auto !important;
+  }
+
+  /* 菜单卡片 */
+  #sidebar .menus_items .menus_item > a,
+  #sidebar .menus_items .site-page {
+    min-height: 50px !important;
+    margin: 10px 0 !important;
+    padding: 0 18px !important;
+    border-radius: 18px !important;
+    background: rgba(255, 255, 255, 0.88) !important;
+    color: #263747 !important;
+    box-shadow:
+      0 8px 22px rgba(31, 45, 61, 0.06),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.7) !important;
+  }
+
+  /* 图标统一成蓝色圆润风格 */
+  #sidebar .menus_items .menus_item i,
+  #sidebar .menus_items .site-page i {
+    width: 28px !important;
+    margin-right: 14px !important;
+    text-align: center !important;
+    font-size: 1.15rem !important;
+    color: #49b1f5 !important;
+  }
+
+  /* 菜单文字 */
+  #sidebar .menus_items .menus_item span,
+  #sidebar .menus_items .site-page span {
+    font-size: 1.12rem !important;
+    font-weight: 600 !important;
+  }
+
+  /* 当前/点击效果 */
+  #sidebar .menus_items .menus_item > a:active,
+  #sidebar .menus_items .site-page:active {
+    transform: scale(0.98) !important;
+    background: rgba(73, 177, 245, 0.16) !important;
+  }
+
+  /* 二级菜单，例如 其他下面的音乐、短片、电影、图书 */
+  #sidebar .menus_item_child {
+    width: 88% !important;
+    margin: 4px auto 12px !important;
+    padding: 6px 0 6px 12px !important;
+    border-left: 3px solid rgba(73, 177, 245, 0.35) !important;
+  }
+
+  #sidebar .menus_item_child li a {
+    min-height: 44px !important;
+    margin: 7px 0 !important;
+    border-radius: 15px !important;
+    background: rgba(255, 255, 255, 0.62) !important;
+    box-shadow: none !important;
+  }
+
+  /* 遮罩别太死黑，稍微高级一点 */
+  #sidebar-mask {
+    background: rgba(8, 22, 32, 0.58) !important;
+    backdrop-filter: blur(3px) saturate(120%);
+    -webkit-backdrop-filter: blur(3px) saturate(120%);
+  }
+}
