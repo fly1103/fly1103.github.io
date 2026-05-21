@@ -221,3 +221,80 @@
     height: 40px;
   }
 }
+
+/* ==============================
+   手机侧边栏细节优化补丁
+   放在最终美化版 CSS 后面
+   ============================== */
+@media screen and (max-width: 768px) {
+
+  /* 侧边栏整体再柔和一点 */
+  #sidebar #sidebar-menus {
+    background:
+      radial-gradient(circle at 50% 0%, rgba(73, 177, 245, 0.16), transparent 36%),
+      rgba(255, 255, 255, 0.56) !important;
+  }
+
+  /* 头像轻微浮起感 */
+  #sidebar .author-avatar img,
+  #sidebar img.avatar-img,
+  #sidebar .avatar-img {
+    box-shadow:
+      0 14px 34px rgba(73, 177, 245, 0.26),
+      0 0 0 9px rgba(255, 255, 255, 0.48),
+      0 0 0 15px rgba(73, 177, 245, 0.08) !important;
+  }
+
+  /* 统计卡片更像玻璃卡片 */
+  #sidebar .site-data {
+    background: rgba(255, 255, 255, 0.54) !important;
+    box-shadow:
+      0 10px 26px rgba(31, 45, 61, 0.055),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.52) !important;
+  }
+
+  /* 菜单卡片透明度统一 */
+  #sidebar .menus_items .menus_item > a,
+  #sidebar .menus_items .site-page {
+    background: rgba(255, 255, 255, 0.66) !important;
+    box-shadow:
+      0 8px 20px rgba(31, 45, 61, 0.05),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.55) !important;
+  }
+
+  /* 当前页面高亮：蓝色但不要太亮 */
+  #sidebar .menus_items .menus_item > a:hover,
+  #sidebar .menus_items .site-page:hover,
+  #sidebar .menus_items .menus_item > a:active,
+  #sidebar .menus_items .site-page:active {
+    background: rgba(73, 177, 245, 0.18) !important;
+    color: #1685d9 !important;
+  }
+
+  /* 当前页面如果有 active/current 类，统一高亮 */
+  #sidebar .menus_items .active,
+  #sidebar .menus_items .current,
+  #sidebar .menus_items .site-page.active {
+    background: rgba(73, 177, 245, 0.20) !important;
+    color: #1685d9 !important;
+    font-weight: 700 !important;
+  }
+
+  /* 图标稍微更清爽 */
+  #sidebar .menus_items .menus_item i,
+  #sidebar .menus_items .site-page i {
+    color: #42aeea !important;
+    text-shadow: 0 3px 8px rgba(73, 177, 245, 0.18) !important;
+  }
+
+  /* 剪刀线再淡一点 */
+  #sidebar hr {
+    border-top: 2px dashed rgba(73, 177, 245, 0.30) !important;
+    opacity: 0.85 !important;
+  }
+
+  /* 底部多留一点空间，避免手机底部栏挡住最后几个菜单 */
+  #sidebar #sidebar-menus {
+    padding-bottom: 88px !important;
+  }
+}
