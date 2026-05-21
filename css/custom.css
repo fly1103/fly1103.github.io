@@ -417,14 +417,16 @@
   object-fit: contain !important;
   object-position: center center !important;
 
+  /* 透明 PNG 不要圆形裁剪，不要白底 */
   border-radius: 0 !important;
   padding: 0 !important;
-
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
 
-  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.28)) !important;
+  /* 只保留一点阴影，让白色封面上也看得清 */
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.22)) !important;
+
   vertical-align: middle !important;
 }
 
