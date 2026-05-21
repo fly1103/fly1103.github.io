@@ -659,3 +659,101 @@
     padding: 0 3px !important;
   }
 }
+
+/* ==============================
+   修复沉浸式搜索出现双层输入框
+   只保留一个玻璃搜索框
+   ============================== */
+@media screen and (max-width: 768px) {
+
+  /* 外层搜索框：保留唯一的玻璃胶囊框 */
+  .search-dialog .search-box,
+  #local-search .search-box,
+  #algolia-search .search-box {
+    position: relative !important;
+
+    width: 100% !important;
+    height: 52px !important;
+
+    margin: 0 !important;
+    padding: 0 52px 0 20px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    border-radius: 999px !important;
+
+    background: rgba(255, 255, 255, 0.16) !important;
+    border: 1px solid rgba(255, 255, 255, 0.42) !important;
+
+    backdrop-filter: blur(16px) saturate(130%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(130%) !important;
+
+    box-shadow:
+      0 10px 26px rgba(0, 0, 0, 0.18),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.16) !important;
+
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  /* 内层 input：去掉自己的边框、背景、阴影 */
+  #local-search-input,
+  #algolia-search-input,
+  .search-dialog input,
+  .search-dialog .search-box input,
+  input[type="search"] {
+    width: 100% !important;
+    height: 52px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    font-size: 16px !important;
+    line-height: 52px !important;
+
+    color: rgba(255, 255, 255, 0.96) !important;
+    caret-color: #fff !important;
+
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+
+    box-sizing: border-box !important;
+  }
+
+  #local-search-input:focus,
+  #algolia-search-input:focus,
+  .search-dialog input:focus {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+  #local-search-input::placeholder,
+  #algolia-search-input::placeholder,
+  .search-dialog input::placeholder {
+    color: rgba(255, 255, 255, 0.72) !important;
+  }
+
+  /* 关闭按钮放在搜索框右侧 */
+  .search-dialog .search-close-button,
+  .search-dialog .search-close,
+  .search-dialog .close,
+  .search-dialog .fa-times,
+  .search-dialog .fas.fa-times {
+    position: absolute !important;
+    top: 14px !important;
+    right: 18px !important;
+
+    font-size: 1.25rem !important;
+    color: rgba(255, 255, 255, 0.82) !important;
+    z-index: 10 !important;
+  }
+}
