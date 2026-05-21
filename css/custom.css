@@ -757,3 +757,88 @@
     z-index: 10 !important;
   }
 }
+
+/* ==============================
+   手机端搜索框居中修正
+   ============================== */
+@media screen and (max-width: 768px) {
+
+  /* 整个搜索弹层内容 */
+  .search-dialog .search-dialog__content,
+  .search-dialog .local-search-box,
+  #local-search .search-dialog__content {
+    width: 88% !important;
+    max-width: 88% !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 搜索头部 */
+  .search-dialog .search-header,
+  #local-search .search-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-bottom: 18px !important;
+  }
+
+  /* 搜索框这一整行 */
+  .search-dialog .search-box,
+  #local-search .search-box {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+
+    width: 100% !important;
+    height: 54px !important;
+    margin: 0 auto !important;
+    padding: 0 56px 0 20px !important;
+
+    border-radius: 999px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 输入框本体 */
+  .search-dialog .search-box input,
+  #local-search-input {
+    width: 100% !important;
+    height: 54px !important;
+    line-height: 54px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    font-size: 16px !important;
+    color: rgba(255,255,255,0.95) !important;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  /* placeholder 居中感更好 */
+  .search-dialog .search-box input::placeholder,
+  #local-search-input::placeholder {
+    color: rgba(255,255,255,0.78) !important;
+    line-height: 54px !important;
+  }
+
+  /* 关闭按钮 */
+  .search-dialog .search-close-button,
+  .search-dialog .search-close,
+  .search-dialog .close,
+  #local-search .search-close-button {
+    position: absolute !important;
+    right: 18px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+
+    margin: 0 !important;
+    font-size: 28px !important;
+    line-height: 1 !important;
+    color: rgba(255,255,255,0.88) !important;
+  }
+}
