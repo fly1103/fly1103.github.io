@@ -441,39 +441,39 @@
 }
 
 /* ==============================
-   手机端沉浸式搜索最终版
-   搜索框 + X 同一行 / 无蓝色标题 / 无大白框
+   Butterfly 手机端沉浸式搜索
+   目标效果：
+   1. 没有大灰框
+   2. 没有明显输入框边框
+   3. “搜索文章”和 X 同一行
+   4. 背景与封面自然融合
+   5. 搜索结果卡片半透明悬浮
    ============================== */
 @media screen and (max-width: 768px) {
 
-  /* 搜索遮罩：保留封面沉浸感 */
+  /* 遮罩层：保留封面背景，只做轻微虚化 */
   #search-mask,
   .search-mask,
   .search-dialog-mask {
-    background: rgba(8, 18, 26, 0.36) !important;
-    backdrop-filter: blur(8px) saturate(110%) !important;
-    -webkit-backdrop-filter: blur(8px) saturate(110%) !important;
+    background: rgba(10, 18, 28, 0.18) !important;
+    backdrop-filter: blur(8px) saturate(105%) !important;
+    -webkit-backdrop-filter: blur(8px) saturate(105%) !important;
   }
 
-  /* 搜索弹窗主体：不要白色大卡片 */
+  /* 搜索主弹层：不要白框/灰框 */
   .search-dialog,
   #local-search .search-dialog,
   #algolia-search .search-dialog {
     position: fixed !important;
-
-    top: 118px !important;
+    top: 132px !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
 
-    width: calc(100vw - 56px) !important;
-    max-width: 430px !important;
+    width: calc(100vw - 64px) !important;
+    max-width: 440px !important;
 
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: 70vh !important;
-
-    padding: 0 !important;
     margin: 0 !important;
+    padding: 0 !important;
 
     background: transparent !important;
     border: none !important;
@@ -481,158 +481,148 @@
     box-shadow: none !important;
 
     overflow: visible !important;
-    box-sizing: border-box !important;
+    z-index: 9999 !important;
   }
 
-  /* 去掉“搜索”标题 */
+  /* 干掉标题“搜索” */
   .search-dialog-title,
   .search-dialog .search-title,
   .search-dialog h1,
   .search-dialog h2,
-  #local-search .search-title {
+  #local-search .search-title,
+  #algolia-search .search-title {
     display: none !important;
   }
 
-  /* 搜索 nav 不占高度 */
+  /* 干掉顶部导航容器影响 */
   .search-dialog .search-nav,
-  #local-search .search-nav {
-    position: static !important;
+  #local-search .search-nav,
+  #algolia-search .search-nav {
     height: 0 !important;
-    padding: 0 !important;
     margin: 0 !important;
+    padding: 0 !important;
     background: transparent !important;
     border: none !important;
   }
 
-  /* 搜索内容容器 */
+  /* 主内容容器 */
   .search-dialog .search-wrap,
   #local-search .search-wrap,
+  #algolia-search .search-wrap,
   .search-dialog .search-box,
-  #local-search .search-box {
+  #local-search .search-box,
+  #algolia-search .search-box {
     position: relative !important;
-
     width: 100% !important;
-    padding: 0 !important;
     margin: 0 !important;
+    padding: 0 !important;
 
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
-
     overflow: visible !important;
-    box-sizing: border-box !important;
   }
 
-  /* 去掉剪刀线/分隔线 */
+  /* 去掉分隔线、装饰线 */
   .search-dialog hr,
   .search-dialog .search-hr,
   .search-dialog .hr-line,
-  .search-dialog .search-border {
+  .search-dialog .search-border,
+  .search-dialog .search-dialog-title:after,
+  .search-dialog .search-title:after {
     display: none !important;
   }
 
-  /* 输入框：唯一的玻璃搜索条 */
+  /* 输入框本体：做成“自然悬浮的一行文字” */
   #local-search-input,
   #algolia-search-input,
   .search-dialog input,
   .search-dialog .search-box input,
   input[type="search"] {
-    display: block !important;
-
     width: 100% !important;
-    height: 54px !important;
+    height: 46px !important;
+    line-height: 46px !important;
 
-    padding: 0 58px 0 22px !important;
     margin: 0 !important;
+    padding: 0 54px 0 0 !important;
 
-    font-size: 16px !important; /* 防止 iPhone 点击自动放大 */
-    line-height: 54px !important;
+    font-size: 16px !important; /* 防止 iPhone 自动放大 */
+    font-weight: 400 !important;
+    color: rgba(255, 255, 255, 0.95) !important;
+    caret-color: #ffffff !important;
 
-    color: rgba(255, 255, 255, 0.96) !important;
-    caret-color: #fff !important;
-
-    background: rgba(255, 255, 255, 0.14) !important;
-    border: 1px solid rgba(255, 255, 255, 0.32) !important;
-    border-radius: 999px !important;
-
-    box-shadow:
-      0 12px 30px rgba(0, 0, 0, 0.18),
-      inset 0 0 0 1px rgba(255, 255, 255, 0.12) !important;
-
-    backdrop-filter: blur(18px) saturate(130%) !important;
-    -webkit-backdrop-filter: blur(18px) saturate(130%) !important;
-
+    background: transparent !important;
+    border: none !important;
     outline: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+
+    text-align: left !important;
     box-sizing: border-box !important;
   }
 
+  /* placeholder */
   #local-search-input::placeholder,
   #algolia-search-input::placeholder,
   .search-dialog input::placeholder {
-    color: rgba(255, 255, 255, 0.78) !important;
+    color: rgba(255, 255, 255, 0.92) !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
   }
 
-  #local-search-input:focus,
-  #algolia-search-input:focus,
-  .search-dialog input:focus {
-    background: rgba(255, 255, 255, 0.18) !important;
-    border-color: rgba(255, 255, 255, 0.52) !important;
-    box-shadow:
-      0 14px 34px rgba(0, 0, 0, 0.22),
-      0 0 0 3px rgba(255, 255, 255, 0.08) !important;
-  }
-
-  /* 关闭按钮 X：和搜索文章同一行 */
+  /* 关闭按钮：和“搜索文章”保持同一行，并微调更居中 */
   .search-close-button,
   .search-dialog .search-close-button,
   .search-dialog .search-close,
   .search-dialog .close,
   .search-dialog .fa-times,
   .search-dialog .fas.fa-times,
-  #local-search .search-close-button {
+  #local-search .search-close-button,
+  #algolia-search .search-close-button {
     position: absolute !important;
-
-    top: 27px !important;
-    right: 20px !important;
+    top: 23px !important;
+    right: 0 !important;
     transform: translateY(-50%) !important;
+
+    width: 34px !important;
+    height: 34px !important;
+    line-height: 34px !important;
 
     margin: 0 !important;
     padding: 0 !important;
 
-    width: 28px !important;
-    height: 28px !important;
-    line-height: 28px !important;
-
-    font-size: 28px !important;
+    font-size: 24px !important;
+    font-weight: 400 !important;
     text-align: center !important;
 
     color: rgba(255, 255, 255, 0.88) !important;
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.20) !important;
 
-    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.25) !important;
     z-index: 20 !important;
   }
 
-  /* 搜索结果区域 */
+  /* 搜索结果容器 */
   #local-search-results,
   #local-search-result,
   .search-dialog #local-search-results,
   .search-dialog #local-search-result,
   .search-dialog .search-result-list,
   .search-dialog .algolia-results {
-    margin-top: 18px !important;
+    margin-top: 22px !important;
     padding: 0 !important;
 
-    max-height: 56vh !important;
+    max-height: 58vh !important;
     overflow-y: auto !important;
 
     background: transparent !important;
+    border: none !important;
     box-shadow: none !important;
   }
 
-  /* 搜索结果条目 */
+  /* 搜索结果每一项 */
   #local-search-results .search-result,
   #local-search-result .search-result,
   #local-search-results .search-result-item,
@@ -641,17 +631,14 @@
     margin: 0 0 14px !important;
     padding: 14px 16px !important;
 
+    background: rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
     border-radius: 18px !important;
 
-    background: rgba(255, 255, 255, 0.13) !important;
-    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
 
-    backdrop-filter: blur(16px) saturate(120%) !important;
-    -webkit-backdrop-filter: blur(16px) saturate(120%) !important;
-
-    box-shadow:
-      0 8px 24px rgba(0, 0, 0, 0.14),
-      inset 0 0 0 1px rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10) !important;
   }
 
   /* 搜索结果标题 */
@@ -660,12 +647,12 @@
   #local-search-results a,
   #local-search-result a {
     color: rgba(255, 255, 255, 0.96) !important;
-    font-weight: 700 !important;
+    font-weight: 600 !important;
   }
 
   /* 搜索结果摘要 */
-  .search-dialog .search-result,
   .search-dialog .search-result-content,
+  .search-dialog .search-result,
   #local-search-results p,
   #local-search-result p,
   #local-search-results span,
@@ -673,14 +660,14 @@
     color: rgba(255, 255, 255, 0.80) !important;
   }
 
-  /* 关键词高亮 */
+  /* 高亮关键词 */
   .search-dialog mark,
   .search-dialog .search-keyword,
   #local-search-results .search-keyword,
   #local-search-result .search-keyword {
+    background: rgba(73, 177, 245, 0.35) !important;
     color: #fff !important;
-    background: rgba(73, 177, 245, 0.42) !important;
-    border-radius: 5px !important;
-    padding: 0 4px !important;
+    border-radius: 4px !important;
+    padding: 0 3px !important;
   }
 }
