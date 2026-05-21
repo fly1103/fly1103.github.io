@@ -760,3 +760,95 @@
     box-shadow: 0 0 10px rgba(73, 177, 245, 0.25) !important;
   }
 }
+
+/* ==============================
+   手机端搜索结果柔和优化
+   降低蓝色高亮和结果卡片突兀感
+   ============================== */
+@media screen and (max-width: 768px) {
+
+  /* 标题前蓝色圆点：变小变柔和 */
+  .search-dialog .search-result-title::before,
+  #local-search-results .search-result-title::before,
+  #local-search-result .search-result-title::before,
+  #local-search-results a.search-result-title::before,
+  #local-search-result a.search-result-title::before {
+    width: 7px !important;
+    height: 7px !important;
+    margin-right: 10px !important;
+
+    background: rgba(73, 177, 245, 0.78) !important;
+    box-shadow:
+      0 0 0 3px rgba(73, 177, 245, 0.10),
+      0 0 8px rgba(73, 177, 245, 0.28) !important;
+
+    vertical-align: 2px !important;
+  }
+
+  /* 搜索结果标题：不要太粗太亮 */
+  .search-dialog .search-result-title,
+  .search-dialog .search-result-title a,
+  #local-search-results .search-result-title,
+  #local-search-result .search-result-title,
+  #local-search-results a,
+  #local-search-result a {
+    color: rgba(255, 255, 255, 0.92) !important;
+    font-size: 1rem !important;
+    font-weight: 650 !important;
+    text-shadow: 0 2px 7px rgba(0, 0, 0, 0.20) !important;
+  }
+
+  /* 搜索结果卡片：更通透，不要像硬边框 */
+  #local-search-results .search-result,
+  #local-search-result .search-result,
+  #local-search-results .search-result-item,
+  #local-search-result .search-result-item,
+  .search-dialog .search-result-list li {
+    background: rgba(255, 255, 255, 0.09) !important;
+    border: 1px solid rgba(255, 255, 255, 0.10) !important;
+    border-radius: 18px !important;
+
+    box-shadow:
+      0 8px 22px rgba(0, 0, 0, 0.10),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.05) !important;
+  }
+
+  /* 摘要文字：稍微淡一点，不要全白 */
+  .search-dialog .search-result,
+  .search-dialog .search-result-content,
+  #local-search-results p,
+  #local-search-result p,
+  #local-search-results span,
+  #local-search-result span {
+    color: rgba(255, 255, 255, 0.78) !important;
+    font-weight: 500 !important;
+    line-height: 1.75 !important;
+    text-shadow: 0 2px 7px rgba(0, 0, 0, 0.18) !important;
+  }
+
+  /* 关键词高亮：从“蓝色块”改成柔和蓝色标记 */
+  .search-dialog mark,
+  .search-dialog .search-keyword,
+  #local-search-results .search-keyword,
+  #local-search-result .search-keyword {
+    color: #ffffff !important;
+    background: rgba(73, 177, 245, 0.36) !important;
+    border-radius: 5px !important;
+    padding: 1px 4px !important;
+    box-shadow: none !important;
+  }
+
+  /* 底部“共找到 x 篇文章”更清楚，但不抢眼 */
+  #local-search-results > p:last-child,
+  #local-search-result > p:last-child,
+  .search-dialog #local-search-results > p:last-child,
+  .search-dialog #local-search-result > p:last-child,
+  .search-dialog .local-search-info,
+  .search-dialog .search-info {
+    color: rgba(255, 255, 255, 0.62) !important;
+    font-size: 0.92rem !important;
+    font-weight: 500 !important;
+    margin-top: 16px !important;
+    text-shadow: 0 2px 7px rgba(0, 0, 0, 0.22) !important;
+  }
+}
