@@ -401,3 +401,37 @@
     margin: 0 7px !important;
   }
 }
+
+/* ==============================
+   顶部导航栏左上角透明猫 Logo
+   ============================== */
+#nav #site-name {
+  display: flex !important;
+  align-items: center !important;
+}
+
+#nav #site-name img {
+  width: 42px !important;
+  height: 42px !important;
+
+  object-fit: contain !important;
+  object-position: center center !important;
+
+  border-radius: 0 !important;
+  padding: 0 !important;
+
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.28)) !important;
+  vertical-align: middle !important;
+}
+
+/* 手机端稍微小一点 */
+@media screen and (max-width: 768px) {
+  #nav #site-name img {
+    width: 38px !important;
+    height: 38px !important;
+  }
+}
