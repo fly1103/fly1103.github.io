@@ -671,3 +671,92 @@
     padding: 0 3px !important;
   }
 }
+
+/* ==============================
+   手机端搜索结果细节优化
+   蓝色圆点 / 统计文字清晰化
+   ============================== */
+@media screen and (max-width: 768px) {
+
+  /* 搜索结果标题前的小蓝圈 */
+  .search-dialog .search-result-title::before,
+  #local-search-results .search-result-title::before,
+  #local-search-result .search-result-title::before,
+  #local-search-results a.search-result-title::before,
+  #local-search-result a.search-result-title::before {
+    content: "" !important;
+    display: inline-block !important;
+
+    width: 9px !important;
+    height: 9px !important;
+    margin-right: 10px !important;
+
+    border-radius: 50% !important;
+    background: rgba(73, 177, 245, 0.95) !important;
+    box-shadow:
+      0 0 0 4px rgba(73, 177, 245, 0.16),
+      0 0 12px rgba(73, 177, 245, 0.45) !important;
+
+    vertical-align: 2px !important;
+  }
+
+  /* 搜索结果标题更清楚 */
+  .search-dialog .search-result-title,
+  .search-dialog .search-result-title a,
+  #local-search-results .search-result-title,
+  #local-search-result .search-result-title,
+  #local-search-results a,
+  #local-search-result a {
+    color: rgba(255, 255, 255, 0.98) !important;
+    font-size: 1.02rem !important;
+    font-weight: 700 !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+  }
+
+  /* 搜索结果内容稍微清楚一点 */
+  .search-dialog .search-result,
+  .search-dialog .search-result-content,
+  #local-search-results p,
+  #local-search-result p {
+    color: rgba(255, 255, 255, 0.84) !important;
+    line-height: 1.75 !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18) !important;
+  }
+
+  /* 底部“共找到 x 篇文章” */
+  .search-dialog .search-result-list::after,
+  #local-search-results .search-result-count,
+  #local-search-result .search-result-count,
+  .search-dialog .search-result-count,
+  .search-dialog .search-info,
+  .search-dialog .local-search-info {
+    color: rgba(255, 255, 255, 0.78) !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+  }
+
+  /* 如果“共找到”是普通段落，增强最后一行的可读性 */
+  #local-search-results > p:last-child,
+  #local-search-result > p:last-child,
+  .search-dialog #local-search-results > p:last-child,
+  .search-dialog #local-search-result > p:last-child {
+    color: rgba(255, 255, 255, 0.78) !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+    margin-top: 16px !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+  }
+
+  /* 关键词高亮更柔和 */
+  .search-dialog mark,
+  .search-dialog .search-keyword,
+  #local-search-results .search-keyword,
+  #local-search-result .search-keyword {
+    color: #ffffff !important;
+    background: rgba(73, 177, 245, 0.52) !important;
+    border-radius: 5px !important;
+    padding: 1px 5px !important;
+    box-shadow: 0 0 10px rgba(73, 177, 245, 0.25) !important;
+  }
+}
