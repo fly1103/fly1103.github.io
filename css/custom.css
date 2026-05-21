@@ -1,14 +1,146 @@
-/* 手机端侧边栏宽度调整 */
+/* ==============================
+   Butterfly 手机侧边栏美化
+   ============================== */
 @media screen and (max-width: 768px) {
+
+  /* 侧边栏整体 */
   #sidebar {
-    width: 65vw !important;
-    max-width: 280px !important;
-    min-width: 230px !important;
+    width: 72vw !important;
+    max-width: 330px !important;
+    min-width: 280px !important;
+    background: linear-gradient(180deg, #ffffff 0%, #f7fbff 55%, #eef8ff 100%) !important;
+    border-radius: 22px 0 0 22px !important;
+    box-shadow: -8px 0 28px rgba(0, 0, 0, 0.18) !important;
+    overflow: hidden !important;
   }
 
-  #sidebar #sidebar-menus,
-  #mobile-sidebar-menus {
-    width: 100% !important;
-    max-width: 280px !important;
+  /* 左边遮罩不要太黑 */
+  #sidebar-mask {
+    background: rgba(0, 0, 0, 0.42) !important;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+  }
+
+  /* 侧边栏内容留白 */
+  #sidebar #sidebar-menus {
+    padding: 26px 22px 40px !important;
+  }
+
+  /* 头像 */
+  #sidebar .avatar-img,
+  #sidebar img.avatar-img {
+    width: 112px !important;
+    height: 112px !important;
+    border-radius: 50% !important;
+    padding: 4px !important;
+    background: #fff !important;
+    box-shadow: 0 8px 24px rgba(73, 177, 245, 0.28) !important;
+  }
+
+  /* 用户名 */
+  #sidebar .site-name {
+    margin-top: 12px !important;
+    font-size: 1.35rem !important;
+    font-weight: 700 !important;
+    color: #2f3a45 !important;
+  }
+
+  /* 文章/标签/分类统计区域 */
+  #sidebar .site-data {
+    margin: 20px 0 18px !important;
+    padding: 14px 8px !important;
+    border-radius: 18px !important;
+    background: rgba(255, 255, 255, 0.78) !important;
+    box-shadow: 0 6px 20px rgba(73, 177, 245, 0.13) !important;
+  }
+
+  #sidebar .site-data > a {
+    color: #3f4b57 !important;
+  }
+
+  #sidebar .headline {
+    font-size: 0.9rem !important;
+    color: #666 !important;
+  }
+
+  #sidebar .length-num {
+    margin-top: 4px !important;
+    font-size: 1.45rem !important;
+    font-weight: 700 !important;
+    color: #1f2d3d !important;
+  }
+
+  /* 分割线剪刀弱化一点 */
+  #sidebar hr {
+    margin: 18px 0 !important;
+    border: none !important;
+    border-top: 2px dashed rgba(73, 177, 245, 0.35) !important;
+  }
+
+  /* 菜单项卡片化 */
+  #sidebar .menus_items .menus_item {
+    margin: 8px 0 !important;
+  }
+
+  #sidebar .menus_items .menus_item > a,
+  #sidebar .menus_items .site-page {
+    display: flex !important;
+    align-items: center !important;
+    min-height: 46px !important;
+    padding: 0 16px !important;
+    border-radius: 14px !important;
+    color: #34495e !important;
+    background: rgba(255, 255, 255, 0.72) !important;
+    box-shadow: 0 4px 14px rgba(73, 177, 245, 0.08) !important;
+    transition: all 0.25s ease !important;
+  }
+
+  /* 图标 */
+  #sidebar .menus_items .menus_item i,
+  #sidebar .menus_items .site-page i {
+    width: 24px !important;
+    margin-right: 12px !important;
+    text-align: center !important;
+    color: #49b1f5 !important;
+    font-size: 1.05rem !important;
+  }
+
+  /* 菜单文字 */
+  #sidebar .menus_items .menus_item span,
+  #sidebar .menus_items .site-page span {
+    font-size: 1.05rem !important;
+    font-weight: 500 !important;
+  }
+
+  /* 点击/悬停效果 */
+  #sidebar .menus_items .menus_item > a:hover,
+  #sidebar .menus_items .site-page:hover {
+    transform: translateX(-3px);
+    background: rgba(73, 177, 245, 0.13) !important;
+    color: #1e88e5 !important;
+  }
+
+  /* 二级菜单，比如 其他 -> 音乐/短片/电影/图书 */
+  #sidebar .menus_item_child {
+    margin: 6px 0 8px 12px !important;
+    padding-left: 10px !important;
+    border-left: 3px solid rgba(73, 177, 245, 0.35) !important;
+  }
+
+  #sidebar .menus_item_child li {
+    margin: 6px 0 !important;
+  }
+
+  #sidebar .menus_item_child li a {
+    min-height: 42px !important;
+    padding: 0 14px !important;
+    border-radius: 12px !important;
+    background: rgba(255, 255, 255, 0.55) !important;
+  }
+
+  /* 关闭按钮区域 */
+  #sidebar .sidebar-toc__title,
+  #sidebar .sidebar-menus__title {
+    color: #34495e !important;
   }
 }
