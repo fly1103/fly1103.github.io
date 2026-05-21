@@ -479,357 +479,103 @@
 }
 
 /* ==============================
-   手机端沉浸式搜索
-   去掉搜索卡片，融入封面背景
+   手机端沉浸式搜索 - 最终简洁版
+   搜索文章 和 X 同一行
    ============================== */
 @media screen and (max-width: 768px) {
 
-  /* 搜索弹窗主体：去掉白色大卡片 */
+  /* 整个搜索遮罩层 */
   .search-dialog,
-  #local-search .search-dialog,
-  #algolia-search .search-dialog {
-    position: fixed !important;
-
-    top: 92px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-
-    width: calc(100vw - 48px) !important;
-    max-width: 420px !important;
-
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: 72vh !important;
-
-    padding: 0 !important;
-    margin: 0 !important;
-
-    background: transparent !important;
-    box-shadow: none !important;
-    border: none !important;
-    border-radius: 0 !important;
-
-    overflow: visible !important;
-    box-sizing: border-box !important;
+  #local-search .search-dialog {
+    background: rgba(0, 0, 0, 0.18) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
   }
 
-  /* 搜索遮罩：让封面变暗一点，但仍然看得见 */
-  #search-mask,
-  .search-mask,
-  .search-dialog-mask {
-    background: rgba(8, 18, 26, 0.34) !important;
-    backdrop-filter: blur(4px) saturate(110%) !important;
-    -webkit-backdrop-filter: blur(4px) saturate(110%) !important;
-  }
-
-  /* 去掉蓝色“搜索”标题 */
-  .search-dialog .search-title,
-  .search-dialog .search-dialog-title,
-  .search-dialog h1,
-  .search-dialog h2 {
-    display: none !important;
-  }
-
-  /* 去掉剪刀分割线 */
-  .search-dialog hr {
-    display: none !important;
-  }
-
-  /* 搜索框容器 */
-  .search-dialog .search-box {
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background: transparent !important;
-    box-sizing: border-box !important;
-  }
-
-  /* 搜索输入框：沉浸式玻璃搜索条 */
-  #local-search-input,
-  #algolia-search-input,
-  .search-dialog input,
-  .search-dialog .search-box input,
-  input[type="search"] {
-    width: 100% !important;
-    height: 48px !important;
-
-    padding: 0 52px 0 20px !important;
-
-    font-size: 16px !important; /* 防止 iPhone 点击放大 */
-    line-height: 48px !important;
-
-    color: rgba(255, 255, 255, 0.96) !important;
-    caret-color: #fff !important;
-
-    background: rgba(255, 255, 255, 0.16) !important;
-    border: 1px solid rgba(255, 255, 255, 0.42) !important;
-    border-radius: 999px !important;
-
-    backdrop-filter: blur(16px) saturate(130%) !important;
-    -webkit-backdrop-filter: blur(16px) saturate(130%) !important;
-
-    box-shadow:
-      0 10px 26px rgba(0, 0, 0, 0.18),
-      inset 0 0 0 1px rgba(255, 255, 255, 0.16) !important;
-
-    outline: none !important;
-    box-sizing: border-box !important;
-  }
-
-  /* 输入框 placeholder */
-  #local-search-input::placeholder,
-  #algolia-search-input::placeholder,
-  .search-dialog input::placeholder {
-    color: rgba(255, 255, 255, 0.72) !important;
-  }
-
-  /* 聚焦时不要蓝色边框，保持白色玻璃感 */
-  #local-search-input:focus,
-  #algolia-search-input:focus,
-  .search-dialog input:focus {
-    background: rgba(255, 255, 255, 0.22) !important;
-    border-color: rgba(255, 255, 255, 0.72) !important;
-    box-shadow:
-      0 12px 30px rgba(0, 0, 0, 0.22),
-      0 0 0 3px rgba(255, 255, 255, 0.10) !important;
-  }
-
-  /* 关闭按钮：放到搜索框右边，白色半透明 */
-  .search-dialog .search-close-button,
-  .search-dialog .search-close,
-  .search-dialog .close,
-  .search-dialog .fa-times,
-  .search-dialog .fas.fa-times {
-    position: absolute !important;
-    top: 13px !important;
-    right: 18px !important;
-
-    font-size: 1.25rem !important;
-    color: rgba(255, 255, 255, 0.82) !important;
-    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.28) !important;
-    z-index: 9 !important;
-  }
-
-  /* 搜索结果区域 */
-  .search-dialog #local-search-results,
-  .search-dialog .search-result-list,
-  .search-dialog .algolia-results {
-    margin-top: 18px !important;
-    max-height: 58vh !important;
-    overflow-y: auto !important;
-    background: transparent !important;
-  }
-
-  /* 搜索结果卡片 */
-  .search-dialog .search-result-list li,
-  .search-dialog #local-search-results .search-result {
-    margin: 10px 0 !important;
-    padding: 14px 16px !important;
-
-    border-radius: 18px !important;
-    background: rgba(255, 255, 255, 0.18) !important;
-
-    backdrop-filter: blur(14px) saturate(120%) !important;
-    -webkit-backdrop-filter: blur(14px) saturate(120%) !important;
-
-    box-shadow:
-      0 8px 22px rgba(0, 0, 0, 0.16),
-      inset 0 0 0 1px rgba(255, 255, 255, 0.18) !important;
-  }
-
-  /* 搜索结果文字 */
-  .search-dialog .search-result-title,
-  .search-dialog .search-result-title a {
-    color: rgba(255, 255, 255, 0.96) !important;
-    font-weight: 700 !important;
-  }
-
-  .search-dialog .search-result,
-  .search-dialog .search-result-content,
-  .search-dialog .search-result-content a {
-    color: rgba(255, 255, 255, 0.78) !important;
-  }
-
-  /* 关键词高亮 */
-  .search-dialog mark,
-  .search-dialog .search-keyword {
-    color: #fff !important;
-    background: rgba(73, 177, 245, 0.45) !important;
-    border-radius: 4px !important;
-    padding: 0 3px !important;
-  }
-}
-
-/* ==============================
-   修复沉浸式搜索出现双层输入框
-   只保留一个玻璃搜索框
-   ============================== */
-@media screen and (max-width: 768px) {
-
-  /* 外层搜索框：保留唯一的玻璃胶囊框 */
-  .search-dialog .search-box,
-  #local-search .search-box,
-  #algolia-search .search-box {
-    position: relative !important;
-
-    width: 100% !important;
-    height: 52px !important;
-
-    margin: 0 !important;
-    padding: 0 52px 0 20px !important;
-
-    display: flex !important;
-    align-items: center !important;
-
-    border-radius: 999px !important;
-
-    background: rgba(255, 255, 255, 0.16) !important;
-    border: 1px solid rgba(255, 255, 255, 0.42) !important;
-
-    backdrop-filter: blur(16px) saturate(130%) !important;
-    -webkit-backdrop-filter: blur(16px) saturate(130%) !important;
-
-    box-shadow:
-      0 10px 26px rgba(0, 0, 0, 0.18),
-      inset 0 0 0 1px rgba(255, 255, 255, 0.16) !important;
-
-    box-sizing: border-box !important;
-    overflow: hidden !important;
-  }
-
-  /* 内层 input：去掉自己的边框、背景、阴影 */
-  #local-search-input,
-  #algolia-search-input,
-  .search-dialog input,
-  .search-dialog .search-box input,
-  input[type="search"] {
-    width: 100% !important;
-    height: 52px !important;
-
-    padding: 0 !important;
-    margin: 0 !important;
-
-    font-size: 16px !important;
-    line-height: 52px !important;
-
-    color: rgba(255, 255, 255, 0.96) !important;
-    caret-color: #fff !important;
-
-    background: transparent !important;
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    outline: none !important;
-
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-
-    box-sizing: border-box !important;
-  }
-
-  #local-search-input:focus,
-  #algolia-search-input:focus,
-  .search-dialog input:focus {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    outline: none !important;
-  }
-
-  #local-search-input::placeholder,
-  #algolia-search-input::placeholder,
-  .search-dialog input::placeholder {
-    color: rgba(255, 255, 255, 0.72) !important;
-  }
-
-  /* 关闭按钮放在搜索框右侧 */
-  .search-dialog .search-close-button,
-  .search-dialog .search-close,
-  .search-dialog .close,
-  .search-dialog .fa-times,
-  .search-dialog .fas.fa-times {
-    position: absolute !important;
-    top: 14px !important;
-    right: 18px !important;
-
-    font-size: 1.25rem !important;
-    color: rgba(255, 255, 255, 0.82) !important;
-    z-index: 10 !important;
-  }
-}
-
-/* ==============================
-   手机端搜索框居中修正
-   ============================== */
-@media screen and (max-width: 768px) {
-
-  /* 整个搜索弹层内容 */
+  /* 搜索主容器：不要大白框 */
+  .search-dialog__content,
   .search-dialog .search-dialog__content,
-  .search-dialog .local-search-box,
   #local-search .search-dialog__content {
-    width: 88% !important;
-    max-width: 88% !important;
-    margin: 0 auto !important;
-    box-sizing: border-box !important;
+    width: calc(100% - 40px) !important;
+    max-width: none !important;
+    margin: 110px auto 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
   }
 
-  /* 搜索头部 */
-  .search-dialog .search-header,
-  #local-search .search-header {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    margin-bottom: 18px !important;
+  /* 去掉顶部单独的“搜索”标题 */
+  .search-dialog__title,
+  .search-dialog .search-title,
+  .search-dialog h1,
+  .search-dialog h2,
+  #local-search .search-title {
+    display: none !important;
   }
 
-  /* 搜索框这一整行 */
+  /* 搜索输入区域 */
   .search-dialog .search-box,
+  .search-dialog .local-search-box,
   #local-search .search-box {
     position: relative !important;
     display: flex !important;
     align-items: center !important;
-
     width: 100% !important;
     height: 54px !important;
-    margin: 0 auto !important;
-    padding: 0 56px 0 20px !important;
-
+    padding: 0 56px 0 18px !important;
+    margin: 0 auto 18px !important;
     border-radius: 999px !important;
-    box-sizing: border-box !important;
+
+    background: rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid rgba(255, 255, 255, 0.22) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14) !important;
+
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+  }
+
+  /* 防止多余的伪元素制造“双框” */
+  .search-dialog .search-box::before,
+  .search-dialog .search-box::after,
+  #local-search .search-box::before,
+  #local-search .search-box::after {
+    display: none !important;
+    content: none !important;
   }
 
   /* 输入框本体 */
-  .search-dialog .search-box input,
-  #local-search-input {
+  #local-search-input,
+  .search-dialog input,
+  .search-dialog .search-box input {
     width: 100% !important;
     height: 54px !important;
     line-height: 54px !important;
-
     padding: 0 !important;
     margin: 0 !important;
 
-    font-size: 16px !important;
-    color: rgba(255,255,255,0.95) !important;
-    background: transparent !important;
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
+    background: transparent !important;
 
-    display: flex !important;
-    align-items: center !important;
+    font-size: 17px !important;
+    color: rgba(255, 255, 255, 0.96) !important;
+    text-align: left !important;
   }
 
-  /* placeholder 居中感更好 */
-  .search-dialog .search-box input::placeholder,
-  #local-search-input::placeholder {
-    color: rgba(255,255,255,0.78) !important;
-    line-height: 54px !important;
+  /* placeholder：搜索文章 */
+  #local-search-input::placeholder,
+  .search-dialog input::placeholder {
+    color: rgba(255, 255, 255, 0.82) !important;
+    font-size: 17px !important;
   }
 
-  /* 关闭按钮 */
+  /* 关闭按钮 X：和输入框同一行 */
   .search-dialog .search-close-button,
   .search-dialog .search-close,
-  .search-dialog .close,
+  .search-dialog .close-button,
+  .search-dialog .close-btn,
   #local-search .search-close-button {
     position: absolute !important;
     right: 18px !important;
@@ -837,8 +583,70 @@
     transform: translateY(-50%) !important;
 
     margin: 0 !important;
-    font-size: 28px !important;
+    padding: 0 !important;
+    width: auto !important;
+    height: auto !important;
+
+    font-size: 30px !important;
     line-height: 1 !important;
-    color: rgba(255,255,255,0.88) !important;
+    color: rgba(255, 255, 255, 0.88) !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  /* 结果区域：自然铺在封面上 */
+  .search-dialog .search-result-list,
+  .search-dialog #local-search-result,
+  #local-search-result {
+    margin-top: 10px !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  /* 单条结果卡片 */
+  .search-dialog .search-result-list .search-result-item,
+  .search-dialog #local-search-result .search-result-item,
+  #local-search-result .search-result-item {
+    margin-bottom: 14px !important;
+    padding: 14px 16px !important;
+    border-radius: 18px !important;
+
+    background: rgba(255, 255, 255, 0.10) !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10) !important;
+
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+  }
+
+  /* 搜索结果文字 */
+  .search-result-title,
+  #local-search-result a {
+    color: rgba(255, 255, 255, 0.96) !important;
+    font-weight: 600 !important;
+  }
+
+  .search-result,
+  .search-result-content,
+  #local-search-result p,
+  #local-search-result span {
+    color: rgba(255, 255, 255, 0.80) !important;
+  }
+
+  /* 高亮关键词 */
+  .search-keyword {
+    color: #8fd3ff !important;
+    background: rgba(143, 211, 255, 0.18) !important;
+    border-radius: 6px !important;
+    padding: 0 4px !important;
+  }
+
+  /* 去掉底部多余分隔装饰（如果还有的话） */
+  .search-dialog hr,
+  .search-dialog .hr-line,
+  .search-dialog .search-border,
+  .search-dialog .search-hr {
+    display: none !important;
   }
 }
