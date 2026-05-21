@@ -477,3 +477,57 @@
     box-sizing: border-box !important;
   }
 }
+
+/* ==============================
+   手机端搜索弹窗半透明毛玻璃
+   ============================== */
+@media screen and (max-width: 768px) {
+
+  /* 搜索弹窗主体背景 */
+  .search-dialog,
+  #local-search .search-dialog,
+  #algolia-search .search-dialog {
+    background: rgba(255, 255, 255, 0.62) !important;
+    backdrop-filter: blur(16px) saturate(120%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(120%) !important;
+
+    border-radius: 18px !important;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12) !important;
+  }
+
+  /* 搜索输入框也做半透明 */
+  .search-dialog input,
+  .search-dialog .search-box input,
+  #local-search-input,
+  #algolia-search-input {
+    background: rgba(255, 255, 255, 0.55) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+
+    font-size: 16px !important;
+    color: #263747 !important;
+  }
+
+  /* 搜索标题 */
+  .search-dialog .search-title,
+  .search-dialog .search-dialog-title,
+  .search-dialog h1,
+  .search-dialog h2 {
+    color: #49b1f5 !important;
+  }
+
+  /* 搜索结果区域透明 */
+  .search-dialog #local-search-results,
+  .search-dialog .search-result-list {
+    background: transparent !important;
+  }
+
+  /* 搜索弹窗外面的黑色遮罩稍微淡一点 */
+  #search-mask,
+  .search-mask,
+  .search-dialog-mask {
+    background: rgba(0, 0, 0, 0.36) !important;
+    backdrop-filter: blur(2px) !important;
+    -webkit-backdrop-filter: blur(2px) !important;
+  }
+}
