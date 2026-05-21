@@ -298,3 +298,106 @@
     padding-bottom: 88px !important;
   }
 }
+
+
+/* ==============================
+   首页封面优化
+   ============================== */
+
+/* 封面整体遮罩：让背景更柔和，文字更清楚 */
+#page-header.full_page:before {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.22) 0%,
+      rgba(0, 0, 0, 0.16) 35%,
+      rgba(0, 0, 0, 0.32) 100%
+    ) !important;
+}
+
+/* 首页标题 */
+#site-info #site-title,
+#page-header #site-title {
+  font-weight: 800 !important;
+  letter-spacing: 0.5px !important;
+  text-shadow:
+    0 4px 14px rgba(0, 0, 0, 0.36),
+    0 0 24px rgba(255, 255, 255, 0.12) !important;
+}
+
+/* 首页副标题 */
+#site-info #site-subtitle,
+#page-header #site-subtitle {
+  margin-top: 12px !important;
+  font-size: 1.18rem !important;
+  letter-spacing: 1px !important;
+  color: rgba(255, 255, 255, 0.92) !important;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* 社交图标整体 */
+#site_social_icons {
+  margin-top: 18px !important;
+}
+
+/* 社交图标：统一成半透明白色，更适合封面 */
+#site_social_icons a,
+#site_social_icons i {
+  color: rgba(255, 255, 255, 0.88) !important;
+  font-size: 1.35rem !important;
+  margin: 0 8px !important;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.34) !important;
+  transition: all 0.25s ease !important;
+}
+
+/* 社交图标悬停 */
+#site_social_icons a:hover,
+#site_social_icons a:hover i {
+  color: #49b1f5 !important;
+  transform: translateY(-2px) scale(1.08) !important;
+}
+
+/* 下滑箭头 */
+.scroll-down-effects {
+  color: rgba(255, 255, 255, 0.75) !important;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.35) !important;
+  animation: coverArrowFloat 2.2s ease-in-out infinite !important;
+}
+
+@keyframes coverArrowFloat {
+  0% {
+    transform: translateY(0);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateY(8px);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.55;
+  }
+}
+
+/* 手机端封面微调 */
+@media screen and (max-width: 768px) {
+  #page-header.full_page {
+    background-position: center bottom !important;
+  }
+
+  #site-info #site-title,
+  #page-header #site-title {
+    font-size: 2.25rem !important;
+  }
+
+  #site-info #site-subtitle,
+  #page-header #site-subtitle {
+    font-size: 1.05rem !important;
+  }
+
+  #site_social_icons a,
+  #site_social_icons i {
+    font-size: 1.28rem !important;
+    margin: 0 7px !important;
+  }
+}
