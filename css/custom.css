@@ -1102,3 +1102,33 @@ body[data-type="carnet"] #article-container hr,
   border: none;
   border-top: 1px dashed rgba(73, 177, 245, 0.35);
 }
+
+/* ==============================
+   顶部导航下拉菜单美化
+   ============================== */
+#nav .menus_items .menus_item .menus_item_child {
+  padding: 10px 8px !important;
+  border-radius: 14px !important;
+
+  background: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(14px) saturate(120%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(120%) !important;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.12),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.4) !important;
+}
+
+#nav .menus_items .menus_item .menus_item_child li {
+  border-radius: 10px !important;
+  margin: 4px 0 !important;
+}
+
+#nav .menus_items .menus_item .menus_item_child li:hover {
+  background: rgba(73, 177, 245, 0.12) !important;
+}
+
+#nav .menus_items .menus_item .menus_item_child li a {
+  padding: 8px 12px !important;
+  font-weight: 500 !important;
+}
