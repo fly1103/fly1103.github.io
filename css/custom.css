@@ -1317,3 +1317,75 @@ body[data-type="carnet"] #article-container hr,
     opacity: 0.45 !important;
   }
 }
+
+/* ==============================
+   手机侧边栏最终微调
+   收紧间距，让菜单更精致
+   ============================== */
+@media screen and (max-width: 768px) {
+
+  /* 头像稍微小一点 */
+  #sidebar #sidebar-menus .site-avatar img {
+    width: 88px !important;
+    height: 88px !important;
+  }
+
+  /* 统计卡片稍微收窄 */
+  #sidebar #sidebar-menus .site-data {
+    width: 74% !important;
+    margin: 12px auto 16px !important;
+    padding: 12px 8px !important;
+  }
+
+  #sidebar #sidebar-menus .site-data .headline {
+    font-size: 13px !important;
+  }
+
+  #sidebar #sidebar-menus .site-data .length-num {
+    font-size: 23px !important;
+  }
+
+  /* 菜单整体再紧凑一点 */
+  #sidebar #sidebar-menus .menus_items {
+    margin-top: 10px !important;
+  }
+
+  #sidebar #sidebar-menus .menus_items .menus_item {
+    margin: 7px auto !important;
+  }
+
+  /* 一级菜单按钮再精致一点 */
+  #sidebar #sidebar-menus .menus_items .menus_item > a {
+    width: 72% !important;
+    min-height: 43px !important;
+    padding: 0 17px !important;
+
+    font-size: 16.5px !important;
+    font-weight: 650 !important;
+  }
+
+  #sidebar #sidebar-menus .menus_items .menus_item > a > i:first-child {
+    font-size: 17px !important;
+    margin-right: 13px !important;
+  }
+
+  /* 读影、关于的箭头更小一点 */
+  #sidebar #sidebar-menus .menus_items .menus_item > a .expand {
+    font-size: 15px !important;
+  }
+
+  /* 二级菜单也收一点 */
+  #sidebar #sidebar-menus .menus_item_child {
+    width: 62% !important;
+    margin: 7px auto 2px !important;
+  }
+
+  #sidebar #sidebar-menus .menus_item_child li {
+    margin: 7px 0 !important;
+  }
+
+  #sidebar #sidebar-menus .menus_item_child li a {
+    min-height: 38px !important;
+    font-size: 15.5px !important;
+  }
+}
