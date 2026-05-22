@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>音乐馆 | Flyingcat</title><meta name="author" content="Flyingcat"><meta name="copyright" content="Flyingcat"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Flyingcat Music 音乐馆 一些喜欢的歌，和某些安静的时刻。 不自动播放，只在你愿意停下来时响起。      document.addEventListener(&#39;DOMContentLoaded&#39;, function () {   const musicList &#x3D; [     {       name: &#39;晴天&#39;,       artist: &#39;Jay Cho">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>音乐馆 | Flyingcat</title><meta name="author" content="Flyingcat"><meta name="copyright" content="Flyingcat"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Flyingcat Music     音乐馆     一些喜欢的歌，和某些安静的时刻。 &lt;div class&#x3D;&quot;fc-lyric-box&quot;&gt;   &lt;div id&#x3D;&quot;fcLyricCurrent&quot; class&#x3D;&quot;fc-lyric-current&quot;&amp;gt">
 <meta property="og:type" content="website">
 <meta property="og:title" content="音乐馆">
 <meta property="og:url" content="https://flying-cat.cn/music/index.html">
 <meta property="og:site_name" content="Flyingcat">
-<meta property="og:description" content="Flyingcat Music 音乐馆 一些喜欢的歌，和某些安静的时刻。 不自动播放，只在你愿意停下来时响起。      document.addEventListener(&#39;DOMContentLoaded&#39;, function () {   const musicList &#x3D; [     {       name: &#39;晴天&#39;,       artist: &#39;Jay Cho">
+<meta property="og:description" content="Flyingcat Music     音乐馆     一些喜欢的歌，和某些安静的时刻。 &lt;div class&#x3D;&quot;fc-lyric-box&quot;&gt;   &lt;div id&#x3D;&quot;fcLyricCurrent&quot; class&#x3D;&quot;fc-lyric-current&quot;&amp;gt">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://flying-cat.cn/img/avatar.png">
 <meta property="article:published_time" content="2026-05-22T02:00:00.000Z">
-<meta property="article:modified_time" content="2026-05-22T16:05:00.919Z">
+<meta property="article:modified_time" content="2026-05-22T16:18:52.314Z">
 <meta property="article:author" content="Flyingcat">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://flying-cat.cn/img/avatar.png"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://flying-cat.cn/music/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
@@ -62,7 +62,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2026-05-23 00:05:00'
+  postUpdate: '2026-05-23 00:18:52'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -164,19 +164,47 @@
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 <div class="fc-music-page">
 <div class="fc-music-bg" id="fcMusicBg"></div>
-<div class="fc-music-card">
-<div class="fc-music-left">
-<div class="fc-disc">
-<img id="fcMusicCover" src="https://img.flying-cat.cn/music/cover/qingtian.jpg" alt="cover">
+<div class="fc-player-card">
+  <div class="fc-player-cover-wrap">
+    <div class="fc-player-disc" id="fcPlayerDisc">
+      <img id="fcMusicCover" src="https://img.flying-cat.cn/music/cover/qingtian.jpg" alt="cover">
+    </div>
+  </div>
+  <div class="fc-player-main">
+    <div class="fc-music-label">Flyingcat Music</div>
+    <h2 id="fcMusicTitle">音乐馆</h2>
+    <p id="fcMusicArtist">一些喜欢的歌，和某些安静的时刻。</p>
+<pre><code>&lt;div class=&quot;fc-lyric-box&quot;&gt;
+  &lt;div id=&quot;fcLyricCurrent&quot; class=&quot;fc-lyric-current&quot;&gt;不自动播放，只在你愿意停下来时响起。&lt;/div&gt;
+  &lt;div id=&quot;fcLyricNext&quot; class=&quot;fc-lyric-next&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;fc-progress-wrap&quot;&gt;
+  &lt;span id=&quot;fcCurrentTime&quot;&gt;00:00&lt;/span&gt;
+  &lt;input id=&quot;fcProgress&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;1000&quot; value=&quot;0&quot;&gt;
+  &lt;span id=&quot;fcDuration&quot;&gt;00:00&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;fc-player-controls&quot;&gt;
+  &lt;button id=&quot;fcPrev&quot; type=&quot;button&quot; title=&quot;上一首&quot;&gt;
+    &lt;i class=&quot;fas fa-step-backward&quot;&gt;&lt;/i&gt;
+  &lt;/button&gt;
+  &lt;button id=&quot;fcPlay&quot; type=&quot;button&quot; class=&quot;fc-play-main&quot; title=&quot;播放/暂停&quot;&gt;
+    &lt;i class=&quot;fas fa-play&quot;&gt;&lt;/i&gt;
+  &lt;/button&gt;
+  &lt;button id=&quot;fcNext&quot; type=&quot;button&quot; title=&quot;下一首&quot;&gt;
+    &lt;i class=&quot;fas fa-step-forward&quot;&gt;&lt;/i&gt;
+  &lt;/button&gt;
+  &lt;button id=&quot;fcMode&quot; type=&quot;button&quot; title=&quot;播放模式&quot;&gt;
+    &lt;i class=&quot;fas fa-list-ul&quot;&gt;&lt;/i&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;fcModeText&quot; class=&quot;fc-mode-text&quot;&gt;顺序播放&lt;/div&gt;
+</code></pre>
+  </div>
 </div>
-</div>
-<div class="fc-music-right">
-<div class="fc-music-label">Flyingcat Music</div>
-<h2 id="fcMusicTitle">音乐馆</h2>
-<p id="fcMusicArtist">一些喜欢的歌，和某些安静的时刻。</p>
-<div id="fcMusicQuote">不自动播放，只在你愿意停下来时响起。</div>
-</div>
-</div>
+<div class="fc-list-title">歌曲列表</div>
 <div id="fc-aplayer"></div>
 </div>
 <script>
@@ -189,19 +217,19 @@ document.addEventListener('DOMContentLoaded', function () {
       cover: 'https://img.flying-cat.cn/music/cover/qingtian.jpg',
       lrc: 'https://img.flying-cat.cn/music/lrc/Jay%20Chou%20-%20qingtian.lrc'
     },
-        {
+    {
       name: '天空之城',
       artist: '李志',
-      url: 'https://img.flying-cat.cn/music/audio/%E6%9D%8E%E5%BF%97%20-%20%E5%A4%A9%E7%A9%BA%E4%B9%8B%E5%9F%8E.mp3',
-      cover: 'https://img.flying-cat.cn/music/cover/%E6%9D%8E%E5%BF%97%20-%20%E5%A4%A9%E7%A9%BA%E4%B9%8B%E5%9F%8E.cover.jpg',
-      lrc: 'https://img.flying-cat.cn/music/lrc/%E6%9D%8E%E5%BF%97%20-%20%E5%A4%A9%E7%A9%BA%E4%B9%8B%E5%9F%8E.lrc'
+      url: 'https://img.flying-cat.cn/music/audio/tiankongzhicheng.mp3',
+      cover: 'https://img.flying-cat.cn/music/cover/tiankongzhicheng.jpg',
+      lrc: 'https://img.flying-cat.cn/music/lrc/tiankongzhicheng.lrc'
     },
-        {
+    {
       name: '孤雏',
       artist: 'AGA',
-      url: 'https://img.flying-cat.cn/music/audio/AGA%20-%20%E5%AD%A4%E9%9B%9B.mp3',
-      cover: 'https://img.flying-cat.cn/music/cover/AGA%20-%20%E5%AD%A4%E9%9B%9B.cover.jpg',
-      lrc: 'https://img.flying-cat.cn/music/lrc/AGA%20-%20%E5%AD%A4%E9%9B%9B.lrc'
+      url: 'https://img.flying-cat.cn/music/audio/guchu.mp3',
+      cover: 'https://img.flying-cat.cn/music/cover/guchu.jpg',
+      lrc: 'https://img.flying-cat.cn/music/lrc/guchu.lrc'
     }
   ]
 
@@ -209,15 +237,20 @@ document.addEventListener('DOMContentLoaded', function () {
   const bgEl = document.getElementById('fcMusicBg')
   const titleEl = document.getElementById('fcMusicTitle')
   const artistEl = document.getElementById('fcMusicArtist')
+  const discEl = document.getElementById('fcPlayerDisc')
+  const playBtn = document.getElementById('fcPlay')
+  const prevBtn = document.getElementById('fcPrev')
+  const nextBtn = document.getElementById('fcNext')
+  const modeBtn = document.getElementById('fcMode')
+  const modeText = document.getElementById('fcModeText')
+  const progress = document.getElementById('fcProgress')
+  const currentTimeEl = document.getElementById('fcCurrentTime')
+  const durationEl = document.getElementById('fcDuration')
+  const lyricCurrentEl = document.getElementById('fcLyricCurrent')
+  const lyricNextEl = document.getElementById('fcLyricNext')
 
-  function updateMusicInfo(index) {
-    const item = musicList[index] || musicList[0]
-
-    coverEl.src = item.cover
-    bgEl.style.backgroundImage = `url('${item.cover}')`
-    titleEl.innerText = item.name
-    artistEl.innerText = item.artist
-  }
+  let lyricData = []
+  let playMode = 'order' // order / loop / random
 
   const ap = new APlayer({
     container: document.getElementById('fc-aplayer'),
@@ -228,23 +261,207 @@ document.addEventListener('DOMContentLoaded', function () {
     preload: 'metadata',
     volume: 0.7,
     listFolded: false,
-    listMaxHeight: '360px',
+    listMaxHeight: '420px',
     lrcType: 3,
     audio: musicList
   })
 
-  updateMusicInfo(0)
+  function formatTime(seconds) {
+    if (!seconds || isNaN(seconds)) return '00:00'
+    const m = Math.floor(seconds / 60)
+    const s = Math.floor(seconds % 60)
+    return String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0')
+  }
+
+  function parseLrc(text) {
+    const result = []
+    const lines = text.split('\n')
+
+    lines.forEach(line => {
+      const matches = line.match(/\[(\d{1,2}):(\d{1,2})(?:\.(\d{1,3}))?\]/g)
+      const content = line.replace(/\[.*?\]/g, '').trim()
+
+      if (!matches || !content) return
+
+      matches.forEach(tag => {
+        const m = tag.match(/\[(\d{1,2}):(\d{1,2})(?:\.(\d{1,3}))?\]/)
+        if (!m) return
+
+        const min = Number(m[1])
+        const sec = Number(m[2])
+        const ms = Number((m[3] || '0').padEnd(3, '0'))
+        const time = min * 60 + sec + ms / 1000
+
+        result.push({
+          time,
+          text: content
+        })
+      })
+    })
+
+    return result.sort((a, b) => a.time - b.time)
+  }
+
+  async function loadLrc(item) {
+    lyricData = []
+    lyricCurrentEl.innerText = '不自动播放，只在你愿意停下来时响起。'
+    lyricNextEl.innerText = ''
+
+    if (!item.lrc) return
+
+    try {
+      const res = await fetch(item.lrc)
+      if (!res.ok) throw new Error('lrc load failed')
+      const text = await res.text()
+      lyricData = parseLrc(text)
+    } catch (e) {
+      lyricCurrentEl.innerText = '暂无歌词'
+      lyricNextEl.innerText = ''
+    }
+  }
+
+  function updateLyric(time) {
+    if (!lyricData.length) return
+
+    let index = lyricData.findIndex((line, i) => {
+      const next = lyricData[i + 1]
+      return time >= line.time && (!next || time < next.time)
+    })
+
+    if (index < 0) index = 0
+
+    lyricCurrentEl.innerText = lyricData[index]?.text || ''
+    lyricNextEl.innerText = lyricData[index + 1]?.text || ''
+  }
+
+  function updateMusicInfo(index) {
+    const item = musicList[index] || musicList[0]
+
+    coverEl.src = item.cover
+    bgEl.style.backgroundImage = `url('${item.cover}')`
+    titleEl.innerText = item.name
+    artistEl.innerText = item.artist
+
+    loadLrc(item)
+  }
+
+  function updatePlayIcon() {
+    if (ap.audio.paused) {
+      playBtn.innerHTML = '<i class="fas fa-play"></i>'
+      discEl.classList.remove('is-playing')
+    } else {
+      playBtn.innerHTML = '<i class="fas fa-pause"></i>'
+      discEl.classList.add('is-playing')
+    }
+  }
+
+  function getCurrentIndex() {
+    return ap.list.index || 0
+  }
+
+  function switchTo(index, autoplay = true) {
+    if (index < 0) index = musicList.length - 1
+    if (index >= musicList.length) index = 0
+
+    ap.list.switch(index)
+    updateMusicInfo(index)
+
+    if (autoplay) {
+      setTimeout(() => ap.play(), 80)
+    }
+  }
+
+  function nextSong() {
+    const current = getCurrentIndex()
+
+    if (playMode === 'loop') {
+      ap.seek(0)
+      ap.play()
+      return
+    }
+
+    if (playMode === 'random') {
+      let next = Math.floor(Math.random() * musicList.length)
+      if (musicList.length > 1 && next === current) {
+        next = (next + 1) % musicList.length
+      }
+      switchTo(next, true)
+      return
+    }
+
+    switchTo(current + 1, true)
+  }
+
+  function prevSong() {
+    switchTo(getCurrentIndex() - 1, true)
+  }
+
+  function toggleMode() {
+    if (playMode === 'order') {
+      playMode = 'loop'
+      modeBtn.innerHTML = '<i class="fas fa-redo"></i>'
+      modeText.innerText = '单曲循环'
+    } else if (playMode === 'loop') {
+      playMode = 'random'
+      modeBtn.innerHTML = '<i class="fas fa-random"></i>'
+      modeText.innerText = '随机播放'
+    } else {
+      playMode = 'order'
+      modeBtn.innerHTML = '<i class="fas fa-list-ul"></i>'
+      modeText.innerText = '顺序播放'
+    }
+  }
+
+  playBtn.addEventListener('click', function () {
+    ap.toggle()
+  })
+
+  prevBtn.addEventListener('click', prevSong)
+  nextBtn.addEventListener('click', nextSong)
+  modeBtn.addEventListener('click', toggleMode)
+
+  progress.addEventListener('input', function () {
+    if (!ap.audio.duration) return
+    const time = ap.audio.duration * Number(progress.value) / 1000
+    ap.seek(time)
+    updateLyric(time)
+  })
 
   ap.on('listswitch', function () {
-    updateMusicInfo(ap.list.index)
+    setTimeout(function () {
+      updateMusicInfo(getCurrentIndex())
+      updatePlayIcon()
+    }, 30)
   })
 
-  ap.on('play', function () {
-    document.querySelector('.fc-disc')?.classList.add('is-playing')
+  ap.on('play', updatePlayIcon)
+  ap.on('pause', updatePlayIcon)
+
+  ap.on('ended', function () {
+    nextSong()
   })
 
-  ap.on('pause', function () {
-    document.querySelector('.fc-disc')?.classList.remove('is-playing')
+  ap.audio.addEventListener('timeupdate', function () {
+    const current = ap.audio.currentTime || 0
+    const duration = ap.audio.duration || 0
+
+    currentTimeEl.innerText = formatTime(current)
+    durationEl.innerText = formatTime(duration)
+
+    if (duration) {
+      progress.value = Math.floor(current / duration * 1000)
+    } else {
+      progress.value = 0
+    }
+
+    updateLyric(current)
   })
+
+  ap.audio.addEventListener('loadedmetadata', function () {
+    durationEl.innerText = formatTime(ap.audio.duration)
+  })
+
+  updateMusicInfo(0)
+  updatePlayIcon()
 })
 </script></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2026 By Flyingcat</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a href="https://flying-cat.cn/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="/js/tw_cn.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script src="/js/mobile-sidebar.js"></script><script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script><script src="/js/fc-share-poster.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.13.0"></script></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body></html>
