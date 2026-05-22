@@ -1134,14 +1134,22 @@ body[data-type="carnet"] #article-container hr,
 }
 
 /* ==============================
-   手机端侧边栏菜单精修版
-   更轻、更安静、更适合写作博客
+   手机端侧边栏菜单安全美化版
+   不覆盖原始图标，避免图标变横线
    ============================== */
 @media screen and (max-width: 768px) {
 
-  /* 侧边栏整体字体 */
+  /* 侧边栏整体 */
+  #sidebar #sidebar-menus {
+    padding: 28px 22px 36px !important;
+    background: rgba(245, 248, 250, 0.56) !important;
+    backdrop-filter: blur(18px) saturate(120%) !important;
+    -webkit-backdrop-filter: blur(18px) saturate(120%) !important;
+  }
+
+  /* 统一字体 */
   #sidebar #sidebar-menus,
-  #sidebar #sidebar-menus * {
+  #sidebar #sidebar-menus a {
     font-family:
       -apple-system,
       BlinkMacSystemFont,
@@ -1152,41 +1160,32 @@ body[data-type="carnet"] #article-container hr,
       sans-serif !important;
   }
 
-  /* 侧边栏内容区域 */
-  #sidebar #sidebar-menus {
-    padding: 28px 22px 36px !important;
-    background: rgba(245, 248, 250, 0.58) !important;
-    backdrop-filter: blur(18px) saturate(120%) !important;
-    -webkit-backdrop-filter: blur(18px) saturate(120%) !important;
-  }
-
-  /* 头像区域稍微精致一点 */
+  /* 头像 */
   #sidebar #sidebar-menus .site-avatar {
-    margin-bottom: 20px !important;
+    margin-bottom: 18px !important;
   }
 
   #sidebar #sidebar-menus .site-avatar img {
-    width: 112px !important;
-    height: 112px !important;
+    width: 110px !important;
+    height: 110px !important;
     padding: 5px !important;
     border-radius: 50% !important;
     background: rgba(255, 255, 255, 0.72) !important;
     box-shadow:
       0 12px 28px rgba(0, 0, 0, 0.10),
-      0 0 0 1px rgba(255, 255, 255, 0.45) !important;
+      0 0 0 1px rgba(255, 255, 255, 0.5) !important;
   }
 
   /* 统计卡片 */
   #sidebar #sidebar-menus .site-data {
-    width: 86% !important;
+    width: 84% !important;
     margin: 18px auto 24px !important;
     padding: 18px 10px !important;
     border-radius: 22px !important;
-
     background: rgba(255, 255, 255, 0.72) !important;
     box-shadow:
       0 12px 28px rgba(0, 0, 0, 0.08),
-      inset 0 0 0 1px rgba(255, 255, 255, 0.35) !important;
+      inset 0 0 0 1px rgba(255, 255, 255, 0.36) !important;
   }
 
   #sidebar #sidebar-menus .site-data .headline {
@@ -1199,25 +1198,19 @@ body[data-type="carnet"] #article-container hr,
     font-size: 26px !important;
     font-weight: 800 !important;
     color: #1f3344 !important;
-    letter-spacing: 0.5px !important;
   }
 
-  /* 剪刀分割线稍微淡一点 */
-  #sidebar #sidebar-menus hr,
-  #sidebar #sidebar-menus .menus_items::before {
-    opacity: 0.55 !important;
-  }
-
-  /* 一级菜单容器 */
+  /* 一级菜单整体间距 */
   #sidebar #sidebar-menus .menus_items {
     margin-top: 18px !important;
+    padding-bottom: 34px !important;
+  }
+
+  #sidebar #sidebar-menus .menus_items .menus_item {
+    margin: 11px auto !important;
   }
 
   /* 一级菜单按钮 */
-  #sidebar #sidebar-menus .menus_items .menus_item {
-    margin: 12px auto !important;
-  }
-
   #sidebar #sidebar-menus .menus_items .menus_item > a {
     width: 84% !important;
     min-height: 54px !important;
@@ -1242,37 +1235,33 @@ body[data-type="carnet"] #article-container hr,
     transition: all 0.22s ease !important;
   }
 
-  /* 一级菜单图标 */
-  #sidebar #sidebar-menus .menus_items .menus_item > a i,
-  #sidebar #sidebar-menus .menus_items .menus_item > a svg {
+  /* 只调整第一个 FontAwesome 图标，不碰 svg，不碰展开箭头 */
+  #sidebar #sidebar-menus .menus_items .menus_item > a > i:first-child {
     width: 26px !important;
     min-width: 26px !important;
-    margin-right: 18px !important;
+    margin-right: 17px !important;
 
-    font-size: 22px !important;
+    font-size: 21px !important;
     color: #49b1f5 !important;
-
     text-align: center !important;
   }
 
-  /* hover / active 效果 */
+  /* 展开箭头保持在右侧 */
+  #sidebar #sidebar-menus .menus_items .menus_item > a .expand {
+    margin-left: auto !important;
+    color: #49b1f5 !important;
+  }
+
+  /* hover */
   #sidebar #sidebar-menus .menus_items .menus_item > a:hover,
   #sidebar #sidebar-menus .menus_items .menus_item > a:active {
     background: rgba(219, 241, 253, 0.82) !important;
     color: #1686c8 !important;
-    transform: translateY(-1px) !important;
   }
 
-  /* 有二级菜单的箭头 */
-  #sidebar #sidebar-menus .menus_items .menus_item > a .expand {
-    margin-left: auto !important;
-    color: #49b1f5 !important;
-    font-size: 20px !important;
-  }
-
-  /* 二级菜单整体 */
+  /* 二级菜单 */
   #sidebar #sidebar-menus .menus_item_child {
-    width: 76% !important;
+    width: 74% !important;
     margin: 10px auto 2px !important;
     padding-left: 18px !important;
 
@@ -1281,7 +1270,6 @@ body[data-type="carnet"] #article-container hr,
     box-shadow: none !important;
   }
 
-  /* 二级菜单项 */
   #sidebar #sidebar-menus .menus_item_child li {
     margin: 10px 0 !important;
   }
@@ -1306,23 +1294,19 @@ body[data-type="carnet"] #article-container hr,
       inset 0 0 0 1px rgba(255, 255, 255, 0.28) !important;
   }
 
-  #sidebar #sidebar-menus .menus_item_child li a i {
+  #sidebar #sidebar-menus .menus_item_child li a > i:first-child {
     width: 24px !important;
     min-width: 24px !important;
-    margin-right: 16px !important;
+    margin-right: 15px !important;
 
     font-size: 20px !important;
     color: #49b1f5 !important;
+    text-align: center !important;
   }
 
   #sidebar #sidebar-menus .menus_item_child li a:hover,
   #sidebar #sidebar-menus .menus_item_child li a:active {
     background: rgba(219, 241, 253, 0.78) !important;
     color: #1686c8 !important;
-  }
-
-  /* 防止菜单太靠底部 */
-  #sidebar #sidebar-menus .menus_items {
-    padding-bottom: 34px !important;
   }
 }
