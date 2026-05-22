@@ -852,3 +852,57 @@
     text-shadow: 0 2px 7px rgba(0, 0, 0, 0.22) !important;
   }
 }
+
+/* ==============================
+   修复手机端 Waline 评论框点击自动放大
+   ============================== */
+@media screen and (max-width: 768px) {
+
+  /* Waline 所有输入框、文本框强制 >=16px，防止 iOS 自动缩放 */
+  .wl-editor,
+  .wl-input,
+  .wl-textarea,
+  .wl-card input,
+  .wl-card textarea,
+  .wl-header input,
+  .wl-header-item input,
+  .wl-comment input,
+  .wl-comment textarea,
+  #waline input,
+  #waline textarea,
+  #wl-edit input,
+  #wl-edit textarea {
+    font-size: 16px !important;
+  }
+
+  /* 评论内容输入区 */
+  .wl-editor {
+    line-height: 1.8 !important;
+    min-height: 160px !important;
+  }
+
+  /* 昵称、邮箱输入框 */
+  .wl-header input,
+  .wl-header-item input {
+    height: 42px !important;
+    line-height: 42px !important;
+  }
+
+  /* placeholder 也保持 16px */
+  .wl-editor::placeholder,
+  .wl-input::placeholder,
+  .wl-header input::placeholder,
+  #waline input::placeholder,
+  #waline textarea::placeholder {
+    font-size: 16px !important;
+  }
+
+  /* 防止输入区域被挤出屏幕 */
+  .wl-panel,
+  .wl-editor,
+  .wl-header,
+  .wl-header-item {
+    box-sizing: border-box !important;
+    max-width: 100% !important;
+  }
+}
