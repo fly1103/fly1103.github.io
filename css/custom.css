@@ -1134,179 +1134,186 @@ body[data-type="carnet"] #article-container hr,
 }
 
 /* ==============================
-   手机端侧边栏菜单安全美化版
-   不覆盖原始图标，避免图标变横线
+   手机端侧边栏菜单紧凑版
+   更适合写作博客
    ============================== */
 @media screen and (max-width: 768px) {
 
-  /* 侧边栏整体 */
-  #sidebar #sidebar-menus {
-    padding: 28px 22px 36px !important;
-    background: rgba(245, 248, 250, 0.56) !important;
-    backdrop-filter: blur(18px) saturate(120%) !important;
-    -webkit-backdrop-filter: blur(18px) saturate(120%) !important;
-  }
-
-  /* 统一字体 */
+  /* 整体字体：优先用系统中文字体，观感更自然 */
   #sidebar #sidebar-menus,
   #sidebar #sidebar-menus a {
     font-family:
       -apple-system,
       BlinkMacSystemFont,
-      "Segoe UI",
+      "SF Pro Display",
       "PingFang SC",
-      "Hiragino Sans GB",
+      "HarmonyOS Sans SC",
       "Microsoft YaHei",
       sans-serif !important;
   }
 
-  /* 头像 */
+  /* 侧边栏背景 */
+  #sidebar #sidebar-menus {
+    padding: 22px 18px 34px !important;
+    background: rgba(245, 248, 250, 0.50) !important;
+    backdrop-filter: blur(18px) saturate(120%) !important;
+    -webkit-backdrop-filter: blur(18px) saturate(120%) !important;
+  }
+
+  /* 头像缩小一点 */
   #sidebar #sidebar-menus .site-avatar {
-    margin-bottom: 18px !important;
+    margin-bottom: 14px !important;
   }
 
   #sidebar #sidebar-menus .site-avatar img {
-    width: 110px !important;
-    height: 110px !important;
-    padding: 5px !important;
+    width: 96px !important;
+    height: 96px !important;
+    padding: 4px !important;
     border-radius: 50% !important;
     background: rgba(255, 255, 255, 0.72) !important;
     box-shadow:
-      0 12px 28px rgba(0, 0, 0, 0.10),
-      0 0 0 1px rgba(255, 255, 255, 0.5) !important;
+      0 10px 24px rgba(0, 0, 0, 0.10),
+      0 0 0 1px rgba(255, 255, 255, 0.48) !important;
   }
 
-  /* 统计卡片 */
+  /* 统计卡片更紧凑 */
   #sidebar #sidebar-menus .site-data {
-    width: 84% !important;
-    margin: 18px auto 24px !important;
-    padding: 18px 10px !important;
-    border-radius: 22px !important;
-    background: rgba(255, 255, 255, 0.72) !important;
+    width: 78% !important;
+    margin: 14px auto 20px !important;
+    padding: 14px 8px !important;
+    border-radius: 20px !important;
+
+    background: rgba(255, 255, 255, 0.68) !important;
     box-shadow:
-      0 12px 28px rgba(0, 0, 0, 0.08),
-      inset 0 0 0 1px rgba(255, 255, 255, 0.36) !important;
+      0 10px 24px rgba(0, 0, 0, 0.075),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.34) !important;
   }
 
   #sidebar #sidebar-menus .site-data .headline {
-    font-size: 15px !important;
+    font-size: 14px !important;
     font-weight: 500 !important;
-    color: rgba(44, 62, 80, 0.72) !important;
+    color: rgba(44, 62, 80, 0.68) !important;
   }
 
   #sidebar #sidebar-menus .site-data .length-num {
-    font-size: 26px !important;
+    font-size: 24px !important;
     font-weight: 800 !important;
     color: #1f3344 !important;
   }
 
-  /* 一级菜单整体间距 */
+  /* 菜单整体 */
   #sidebar #sidebar-menus .menus_items {
-    margin-top: 18px !important;
-    padding-bottom: 34px !important;
+    margin-top: 14px !important;
+    padding-bottom: 30px !important;
   }
 
   #sidebar #sidebar-menus .menus_items .menus_item {
-    margin: 11px auto !important;
+    margin: 8px auto !important;
   }
 
-  /* 一级菜单按钮 */
+  /* 一级菜单按钮：更窄、更矮 */
   #sidebar #sidebar-menus .menus_items .menus_item > a {
-    width: 84% !important;
-    min-height: 54px !important;
-    padding: 0 22px !important;
+    width: 76% !important;
+    min-height: 46px !important;
+    padding: 0 18px !important;
     margin: 0 auto !important;
 
     display: flex !important;
     align-items: center !important;
 
     border-radius: 999px !important;
-    background: rgba(255, 255, 255, 0.76) !important;
+    background: rgba(255, 255, 255, 0.72) !important;
 
     color: #1f3344 !important;
-    font-size: 19px !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.5px !important;
+    font-size: 17px !important;
+    font-weight: 650 !important;
+    letter-spacing: 0.3px !important;
 
     box-shadow:
-      0 8px 22px rgba(0, 0, 0, 0.07),
-      inset 0 0 0 1px rgba(255, 255, 255, 0.38) !important;
+      0 7px 18px rgba(0, 0, 0, 0.065),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.34) !important;
 
     transition: all 0.22s ease !important;
   }
 
-  /* 只调整第一个 FontAwesome 图标，不碰 svg，不碰展开箭头 */
+  /* 只动 FontAwesome 原始图标，不碰 svg，避免变横线 */
   #sidebar #sidebar-menus .menus_items .menus_item > a > i:first-child {
-    width: 26px !important;
-    min-width: 26px !important;
-    margin-right: 17px !important;
+    width: 22px !important;
+    min-width: 22px !important;
+    margin-right: 14px !important;
 
-    font-size: 21px !important;
+    font-size: 18px !important;
     color: #49b1f5 !important;
     text-align: center !important;
   }
 
-  /* 展开箭头保持在右侧 */
+  /* 展开箭头 */
   #sidebar #sidebar-menus .menus_items .menus_item > a .expand {
     margin-left: auto !important;
     color: #49b1f5 !important;
+    font-size: 16px !important;
   }
 
-  /* hover */
   #sidebar #sidebar-menus .menus_items .menus_item > a:hover,
   #sidebar #sidebar-menus .menus_items .menus_item > a:active {
-    background: rgba(219, 241, 253, 0.82) !important;
+    background: rgba(220, 241, 253, 0.82) !important;
     color: #1686c8 !important;
+    transform: translateY(-1px) !important;
   }
 
-  /* 二级菜单 */
+  /* 二级菜单默认隐藏，配合下面 JS 使用 */
   #sidebar #sidebar-menus .menus_item_child {
-    width: 74% !important;
-    margin: 10px auto 2px !important;
-    padding-left: 18px !important;
+    display: none;
+    width: 66% !important;
+    margin: 8px auto 2px !important;
+    padding-left: 14px !important;
 
-    border-left: 3px solid rgba(73, 177, 245, 0.22) !important;
+    border-left: 2px solid rgba(73, 177, 245, 0.22) !important;
     background: transparent !important;
     box-shadow: none !important;
   }
 
+  #sidebar #sidebar-menus .menus_item.fc-open > .menus_item_child {
+    display: block !important;
+  }
+
   #sidebar #sidebar-menus .menus_item_child li {
-    margin: 10px 0 !important;
+    margin: 8px 0 !important;
   }
 
   #sidebar #sidebar-menus .menus_item_child li a {
-    min-height: 46px !important;
-    padding: 0 18px !important;
+    min-height: 40px !important;
+    padding: 0 16px !important;
 
     display: flex !important;
     align-items: center !important;
 
     border-radius: 999px !important;
-    background: rgba(255, 255, 255, 0.68) !important;
+    background: rgba(255, 255, 255, 0.62) !important;
 
     color: #24394a !important;
-    font-size: 18px !important;
-    font-weight: 650 !important;
-    letter-spacing: 0.4px !important;
+    font-size: 16px !important;
+    font-weight: 620 !important;
+    letter-spacing: 0.25px !important;
 
     box-shadow:
-      0 6px 16px rgba(0, 0, 0, 0.05),
-      inset 0 0 0 1px rgba(255, 255, 255, 0.28) !important;
+      0 5px 14px rgba(0, 0, 0, 0.045),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.26) !important;
   }
 
   #sidebar #sidebar-menus .menus_item_child li a > i:first-child {
-    width: 24px !important;
-    min-width: 24px !important;
-    margin-right: 15px !important;
+    width: 20px !important;
+    min-width: 20px !important;
+    margin-right: 12px !important;
 
-    font-size: 20px !important;
+    font-size: 17px !important;
     color: #49b1f5 !important;
     text-align: center !important;
   }
 
-  #sidebar #sidebar-menus .menus_item_child li a:hover,
-  #sidebar #sidebar-menus .menus_item_child li a:active {
-    background: rgba(219, 241, 253, 0.78) !important;
-    color: #1686c8 !important;
+  /* 剪刀线淡一点 */
+  #sidebar #sidebar-menus hr,
+  #sidebar #sidebar-menus .menus_items::before {
+    opacity: 0.45 !important;
   }
 }
