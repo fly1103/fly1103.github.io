@@ -906,3 +906,199 @@
     max-width: 100% !important;
   }
 }
+
+
+/* ==============================
+   Flyingcat 音乐馆页面
+   ============================== */
+.fc-music-page {
+  position: relative;
+  overflow: hidden;
+  min-height: 620px;
+  padding: 42px 28px;
+  border-radius: 24px;
+}
+
+.fc-music-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(28px) brightness(0.72);
+  transform: scale(1.12);
+  opacity: 0.72;
+}
+
+.fc-music-page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.16), rgba(255,255,255,0.08)),
+    rgba(10, 18, 26, 0.36);
+}
+
+.fc-music-card,
+#fc-aplayer {
+  position: relative;
+  z-index: 2;
+}
+
+.fc-music-card {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 34px;
+  align-items: center;
+  max-width: 880px;
+  margin: 0 auto 32px;
+  padding: 34px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(18px) saturate(125%);
+  -webkit-backdrop-filter: blur(18px) saturate(125%);
+  box-shadow:
+    0 18px 44px rgba(0, 0, 0, 0.18),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+
+.fc-disc {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  padding: 12px;
+  background:
+    radial-gradient(circle, rgba(255,255,255,0.95) 0 18%, rgba(20,20,20,0.9) 19% 22%, transparent 23%),
+    repeating-radial-gradient(circle, #222 0 3px, #111 4px 7px);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.28);
+}
+
+.fc-disc img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+.fc-disc.is-playing {
+  animation: fcDiscRotate 18s linear infinite;
+}
+
+@keyframes fcDiscRotate {
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg); }
+}
+
+.fc-music-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  color: rgba(255,255,255,0.88);
+  background: rgba(255,255,255,0.16);
+  font-size: 0.9rem;
+}
+
+.fc-music-right h2 {
+  margin: 0 0 12px;
+  color: rgba(255,255,255,0.96);
+  font-size: 2rem;
+  font-weight: 800;
+  text-shadow: 0 4px 16px rgba(0,0,0,0.28);
+}
+
+.fc-music-right p {
+  margin: 0 0 20px;
+  color: rgba(255,255,255,0.78);
+}
+
+#fcMusicQuote {
+  color: rgba(255,255,255,0.82);
+  line-height: 1.8;
+}
+
+#fc-aplayer {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+#fc-aplayer .aplayer {
+  border-radius: 22px;
+  background: rgba(255,255,255,0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.16);
+}
+
+@media screen and (max-width: 768px) {
+  .fc-music-page {
+    padding: 28px 16px;
+    min-height: 560px;
+  }
+
+  .fc-music-card {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 26px 22px;
+    text-align: center;
+  }
+
+  .fc-disc {
+    width: 190px;
+    height: 190px;
+    margin: 0 auto;
+  }
+
+  .fc-music-right h2 {
+    font-size: 1.55rem;
+  }
+
+  #fc-aplayer .aplayer {
+    border-radius: 18px;
+  }
+}
+
+/* ==============================
+   手记页面样式
+   ============================== */
+body[data-type="carnet"] #page,
+.page.carnet #page {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+body[data-type="carnet"] #article-container,
+.page.carnet #article-container {
+  font-size: 1.05rem;
+  line-height: 2;
+  color: #333;
+}
+
+body[data-type="carnet"] #article-container h2,
+.page.carnet #article-container h2 {
+  margin-top: 2.6rem;
+  padding-left: 14px;
+  border-left: 4px solid #49b1f5;
+  font-size: 1.45rem;
+}
+
+body[data-type="carnet"] #article-container h3,
+.page.carnet #article-container h3 {
+  margin-top: 2rem;
+  color: #49b1f5;
+  font-size: 1.05rem;
+}
+
+body[data-type="carnet"] #article-container p,
+.page.carnet #article-container p {
+  margin: 0.8rem 0 1.2rem;
+}
+
+body[data-type="carnet"] #article-container hr,
+.page.carnet #article-container hr {
+  margin: 2rem 0;
+  border: none;
+  border-top: 1px dashed rgba(73, 177, 245, 0.35);
+}
