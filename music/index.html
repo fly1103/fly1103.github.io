@@ -7,7 +7,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://flying-cat.cn/img/avatar.png">
 <meta property="article:published_time" content="2026-05-22T02:00:00.000Z">
-<meta property="article:modified_time" content="2026-05-25T02:23:01.464Z">
+<meta property="article:modified_time" content="2026-05-25T02:32:01.363Z">
 <meta property="article:author" content="Flyingcat">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://flying-cat.cn/img/avatar.png"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://flying-cat.cn/music/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
@@ -62,7 +62,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2026-05-25 10:23:01'
+  postUpdate: '2026-05-25 10:32:01'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -434,7 +434,7 @@ body.music-fullscreen #nav #toggle-menu {
 .fc-btn {
   width: 78px;
   height: 78px;
-  border: none;
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 50%;
   background: rgba(255,255,255,0.10);
   color: #fff;
@@ -443,7 +443,7 @@ body.music-fullscreen #nav #toggle-menu {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: transform .18s ease, background .18s ease, color .18s ease;
+  transition: transform .18s ease, background .18s ease, color .18s ease, border-color .18s ease;
   -webkit-tap-highlight-color: transparent;
   outline: none !important;
   box-shadow: none !important;
@@ -451,7 +451,8 @@ body.music-fullscreen #nav #toggle-menu {
 
 .fc-btn:hover {
   transform: translateY(-2px);
-  background: rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.16);
+  border-color: rgba(255,255,255,0.14);
 }
 
 .fc-btn:focus,
@@ -464,7 +465,7 @@ body.music-fullscreen #nav #toggle-menu {
 }
 
 .fc-btn.is-pressing {
-  background: rgba(255,255,255,0.18) !important;
+  background: rgba(255,255,255,0.16) !important;
   color: #fff !important;
 }
 
@@ -474,6 +475,8 @@ body.music-fullscreen #nav #toggle-menu {
   font-size: 2.4rem;
   background: rgba(255,255,255,0.96);
   color: #0c1b1d;
+  border-color: rgba(255,255,255,0.44);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.24) !important;
 }
 
 .fc-btn-main:hover,
@@ -483,6 +486,7 @@ body.music-fullscreen #nav #toggle-menu {
 .fc-btn-main.is-pressing {
   background: #ffffff !important;
   color: #0c1b1d !important;
+  box-shadow: 0 18px 36px rgba(0,0,0,0.24) !important;
 }
 
 .fc-mode-text {
@@ -534,7 +538,7 @@ body.music-fullscreen #nav #toggle-menu {
   width: 44px;
   height: 44px;
   border-radius: 14px;
-  border: none;
+  border: 1px solid rgba(255,255,255,0.08);
   background: rgba(255,255,255,0.08);
   color: #fff;
   font-size: 1.1rem;
@@ -620,7 +624,7 @@ body.music-fullscreen #nav #toggle-menu {
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  border: none;
+  border: 1px solid rgba(255,255,255,0.08);
   background: rgba(34, 40, 48, 0.82);
   color: #fff;
   font-size: 1.35rem;
@@ -717,7 +721,7 @@ body.music-fullscreen #nav #toggle-menu {
     width: 100%;
     height: 100%;
     border-radius: 0;
-    padding: 16px 24px 18px;
+    padding: 12px 22px 16px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -730,21 +734,21 @@ body.music-fullscreen #nav #toggle-menu {
 
   .fc-player-left {
     height: auto;
-    margin-top: -4px;
-    margin-bottom: 18px;
+    margin-top: -10px;
+    margin-bottom: 14px;
     flex-shrink: 0;
   }
 
   .fc-cover-frame {
-    width: min(72vw, 250px);
-    height: min(72vw, 250px);
-    border-radius: 28px;
+    width: min(66vw, 238px);
+    height: min(66vw, 238px);
+    border-radius: 26px;
   }
 
   .fc-cover-img {
-    width: min(54vw, 188px);
-    height: min(54vw, 188px);
-    border-radius: 18px;
+    width: min(51vw, 182px);
+    height: min(51vw, 182px);
+    border-radius: 17px;
   }
 
   .fc-player-right {
@@ -756,107 +760,162 @@ body.music-fullscreen #nav #toggle-menu {
   }
 
   .fc-song-title {
-    font-size: clamp(2.2rem, 9vw, 3rem);
+    font-size: clamp(2.15rem, 8.2vw, 2.72rem);
     line-height: 1.02;
     margin-top: 0;
+    letter-spacing: 0.01em;
   }
 
   .fc-song-artist {
-    margin-top: 8px;
-    font-size: 1.08rem;
+    margin-top: 5px;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.62);
   }
 
   .fc-lyric-box {
-    margin-top: 16px;
-    padding: 0;
-    min-height: 78px;
+    margin-top: 24px;
+    padding: 0 8px;
+    min-height: 62px;
     background: transparent;
     border: none;
     box-shadow: none;
-    overflow: hidden;
+    overflow: visible;
+    text-align: center;
+    box-sizing: border-box;
   }
 
   .fc-lyric-current {
-    font-size: 1.02rem;
-    line-height: 1.48;
+    width: 100%;
+    padding: 0 4px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    font-weight: 850;
+    letter-spacing: 0.02em;
+    color: rgba(255,255,255,0.96);
+
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+
+    word-break: normal;
+    overflow-wrap: anywhere;
   }
 
   .fc-lyric-next {
-    margin-top: 6px;
-    font-size: 0.88rem;
-    line-height: 1.38;
+    width: 100%;
+    padding: 0 4px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 0.86rem;
+    line-height: 1.35;
+    color: rgba(255,255,255,0.36);
+
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
+
+    word-break: normal;
+    overflow-wrap: anywhere;
   }
 
   .fc-progress-wrap {
-    margin-top: 14px;
-    grid-template-columns: 54px 1fr 54px;
+    margin-top: 20px;
+    grid-template-columns: 50px 1fr 50px;
     gap: 10px;
   }
 
   .fc-time {
-    font-size: 0.88rem;
+    font-size: 0.86rem;
+    color: rgba(255,255,255,0.70);
   }
 
   #fcProgress {
-    height: 5px;
+    height: 4px;
+    background: rgba(255,255,255,0.24);
   }
 
   #fcProgress::-webkit-slider-thumb {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
   }
 
   #fcProgress::-moz-range-thumb {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
   }
 
   .fc-player-controls {
-    margin-top: 18px;
-    justify-content: space-between;
-    gap: 8px;
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: 52px 76px 52px 52px 52px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
   }
 
   .fc-btn {
-    width: 58px;
-    height: 58px;
-    font-size: 1.35rem;
-    background: rgba(255,255,255,0.10) !important;
-    color: #fff !important;
+    width: 52px;
+    height: 52px;
+    font-size: 1.18rem;
+    background: rgba(255,255,255,0.095) !important;
+    color: rgba(255,255,255,0.92) !important;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: none !important;
   }
 
   .fc-btn-main {
-    width: 86px;
-    height: 86px;
-    font-size: 1.8rem;
-    background: #fff !important;
+    width: 76px;
+    height: 76px;
+    font-size: 1.55rem;
+    background: rgba(255,255,255,0.96) !important;
     color: #0c1b1d !important;
+    border-color: rgba(255,255,255,0.45);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.24) !important;
+  }
+
+  .fc-btn:hover,
+  .fc-btn:focus,
+  .fc-btn:active,
+  .fc-btn:focus-visible {
+    transform: none !important;
+    background: rgba(255,255,255,0.095) !important;
+    color: rgba(255,255,255,0.92) !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  .fc-btn-main:hover,
+  .fc-btn-main:focus,
+  .fc-btn-main:active,
+  .fc-btn-main:focus-visible {
+    background: rgba(255,255,255,0.96) !important;
+    color: #0c1b1d !important;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.24) !important;
   }
 
   .fc-mode-text {
     margin-top: 10px;
     text-align: center;
-    font-size: 0.88rem;
+    font-size: 0.84rem;
+    color: rgba(255,255,255,0.34);
   }
 
   .fc-music-exit {
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 18px;
-    left: 18px;
-    width: 48px;
-    height: 48px;
-    font-size: 1.12rem;
-    background: rgba(34, 40, 48, 0.78);
+    top: 16px;
+    left: 16px;
+    width: 44px;
+    height: 44px;
+    font-size: 1rem;
+    background: rgba(34,40,48,0.62);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.18);
   }
 
   .fc-playlist-drawer {
@@ -892,54 +951,6 @@ body.music-fullscreen #nav #toggle-menu {
     grid-template-columns: 34px 1fr 48px;
     gap: 12px;
     padding: 12px 12px;
-  }
-}
-
-/* 手机端：歌词居中，避免第一个字被裁切 */
-@media screen and (max-width: 768px) {
-  .fc-lyric-box {
-    margin-top: 16px !important;
-    padding: 0 10px !important;
-    min-height: 78px !important;
-    overflow: visible !important;
-    text-align: center !important;
-    box-sizing: border-box !important;
-  }
-
-  .fc-lyric-current {
-    width: 100% !important;
-    padding: 0 4px !important;
-    box-sizing: border-box !important;
-    text-align: center !important;
-    font-size: 1.02rem !important;
-    line-height: 1.48 !important;
-    font-weight: 850 !important;
-
-    display: -webkit-box !important;
-    -webkit-line-clamp: 2 !important;
-    -webkit-box-orient: vertical !important;
-    overflow: hidden !important;
-
-    word-break: normal !important;
-    overflow-wrap: anywhere !important;
-  }
-
-  .fc-lyric-next {
-    width: 100% !important;
-    padding: 0 4px !important;
-    box-sizing: border-box !important;
-    text-align: center !important;
-    margin-top: 6px !important;
-    font-size: 0.88rem !important;
-    line-height: 1.38 !important;
-
-    display: -webkit-box !important;
-    -webkit-line-clamp: 1 !important;
-    -webkit-box-orient: vertical !important;
-    overflow: hidden !important;
-
-    word-break: normal !important;
-    overflow-wrap: anywhere !important;
   }
 }
 </style>
