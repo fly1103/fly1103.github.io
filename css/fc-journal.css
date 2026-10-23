@@ -124,3 +124,17 @@ body.fc-journal-literary #article-container h2,body.fc-journal-literary #article
   .fc-movie-index .fc-post-date { grid-column: auto; }
   .fc-movie-read { margin-top: 8px; }
 }
+
+/* Navigation covers: a consistent, quiet photographic series. */
+body.fc-journal-section:not(.music-fullscreen) #page-header.not-home-page { height: 320px; min-height: 0; background-color: #45634f; background-position: center; }
+body.fc-journal-section:not(.music-fullscreen) #page-header.not-home-page:before { background: linear-gradient(180deg,rgba(21,34,27,.38),rgba(21,34,27,.18) 40%,rgba(21,34,27,.52)); }
+body.fc-journal-section #page-site-info { top: 50%; transform: translateY(-15%); }
+body.fc-journal-section #page-header #site-title { font-size: clamp(30px,3.4vw,44px); font-weight: 500!important; letter-spacing: 5px!important; text-shadow: 0 2px 14px rgba(0,0,0,.35)!important; }
+.fc-cover-credit { position: absolute; right: 24px; bottom: 15px; z-index: 2; color: #fff!important; font-size: 10px; letter-spacing: .5px; text-shadow: 0 1px 5px #000; opacity: .85; }
+.fc-cover-credit:hover { opacity: 1; text-decoration: underline; }
+body.music-fullscreen .fc-cover-credit { display: none; }
+@media(max-width:768px) {
+  body.fc-journal-section:not(.music-fullscreen) #page-header.not-home-page { height: 240px; background-position: center; }
+  body.fc-journal-section #page-site-info { top: 48%; }
+  .fc-cover-credit { right: 16px; bottom: 12px; font-size: 9px; }
+}
