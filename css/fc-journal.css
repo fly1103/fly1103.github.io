@@ -10,7 +10,7 @@ body.fc-journal-home #page-header:before, body.fc-journal-home #site-info, body.
 body.fc-journal-home #nav { color:var(--fc-ink); text-shadow:none; box-shadow:none; }
 body.fc-journal-home #nav a, body.fc-journal-home #nav i { color:var(--fc-ink)!important; text-shadow:none!important; }
 #nav .site-icon { width:42px; height:42px; object-fit:contain; }
-body.fc-journal-home #nav { max-width:1240px; left:50%; transform:translateX(-50%); padding:16px 36px; }
+body.fc-journal-home #nav { max-width:1240px; left:0; right:0; margin-inline:auto; padding:16px 36px; }
 body.fc-journal-home #content-inner { max-width:1180px; padding-top:22px; }
 body.fc-journal-home #aside-content { display:none; }
 body.fc-journal-home #live2d-widget { display:none!important; }
