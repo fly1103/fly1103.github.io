@@ -37,7 +37,10 @@ document.addEventListener('DOMContentLoaded', function () {
       const $body = document.body
       $body.style.overflow = ''
       $body.style.paddingRight = ''
-      btf.animateOut(document.getElementById('menu-mask'), 'to_hide 0.5s')
+      // Do not leave a blocking backdrop when an animation is interrupted.
+      const $mask = document.getElementById('menu-mask')
+      $mask.style.display = ''
+      $mask.style.animation = ''
       document.getElementById('sidebar-menus').classList.remove('open')
       mobileSidebarOpen = false
     }
@@ -829,6 +832,14 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
     document.getElementById('menu-mask').addEventListener('click', e => { sidebarFn.close() })
+    window.addEventListener('pageshow', sidebarFn.close)
+    document.addEventListener('pjax:send', sidebarFn.close)
+    document.getElementById('sidebar-menus').addEventListener('click', e => {
+      const link = e.target.closest('a[href]')
+      if (!link || e.defaultPrevented) return
+      const href = link.getAttribute('href')
+      if (href && href !== '#' && !href.toLowerCase().startsWith('javascript:')) sidebarFn.close()
+    })
 
     clickFnOfSubMenu()
     GLOBAL_CONFIG.islazyload && lazyloadImg()
