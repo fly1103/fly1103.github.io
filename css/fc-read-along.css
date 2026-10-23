@@ -1,0 +1,41 @@
+#fcReadAlongTrigger{position:fixed;top:90px;right:22px;z-index:10001;display:flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border:1px solid #ffffff30;border-radius:24px;background:#182b24e8;color:#fffdf8;font:500 13px system-ui,-apple-system,sans-serif;cursor:pointer;box-shadow:0 5px 22px #0003;}
+#fcReadAlongTrigger:hover{background:#45634f;}
+#fcReadAlongTrigger:focus-visible,#fcReading button:focus-visible{outline:2px solid #bda17b;outline-offset:3px;}
+body.fc-reading{overflow:hidden!important;}
+body.fc-reading #page-header,body.fc-reading .fc-music-page,body.fc-reading #fcReadAlongTrigger{display:none!important;}
+body.music-fullscreen #live2d-widget{display:none!important;}
+body.music-fullscreen #fcMusicTitle{color:rgba(255,255,255,.94)!important;margin:0!important;}
+body.music-fullscreen #fcMusicArtist{margin:5px 0 0!important;}
+#fcReading[hidden]{display:none!important;}
+#fcReading{position:fixed;inset:0;z-index:11000;display:flex;flex-direction:column;height:100vh;height:100dvh;background:var(--fc-paper,#f6f4ed);color:var(--fc-ink,#303a34);font-family:system-ui,-apple-system,"Microsoft YaHei",sans-serif;}
+#fcReadFrame{display:block;width:100%;min-height:0;flex:1;border:0;background:var(--fc-paper,#f6f4ed);}
+#fcReading .fc-reading-dock{flex:none;padding:12px 20px calc(12px + env(safe-area-inset-bottom,0px));background:var(--fc-paper,#f6f4ed);border-top:1px solid var(--fc-line,#d9ded2);}
+#fcReading .fc-mini-player{position:relative;display:flex;align-items:center;gap:12px;max-width:660px;margin:0 auto;padding:12px 14px;border:1px solid var(--fc-line,#d9ded2);border-radius:14px;background:var(--fc-surface,#fffdf8);box-shadow:0 4px 20px #303a340a;overflow:hidden;}
+#fcReading button{appearance:none;-webkit-appearance:none;display:inline-flex;align-items:center;justify-content:center;flex:none;border:0;cursor:pointer;font:inherit;-webkit-tap-highlight-color:transparent;color:inherit;background:transparent;}
+#fcReading .fc-mini-art{padding:0;border-radius:8px;}
+#fcReading .fc-mini-cover{display:block;width:44px;height:44px;object-fit:cover;border-radius:8px;}
+#fcReading .fc-mini-meta{display:flex;align-items:flex-start;justify-content:center;flex-direction:column;min-width:0;flex:1;padding:0;text-align:left;line-height:1.5;}
+#fcReading .fc-mini-song{display:block;width:100%;font-size:14px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+#fcReading .fc-mini-detail{display:flex;gap:7px;max-width:100%;color:var(--fc-muted,#6b736b);font-size:11px;white-space:nowrap;}
+#fcReading .fc-mini-artist{overflow:hidden;text-overflow:ellipsis;max-width:150px;}
+#fcReading .fc-mini-tag{color:var(--fc-green,#45634f);}
+#fcReading .fc-mini-control{width:40px;height:40px;border-radius:50%;font-size:15px;}
+#fcReading .fc-mini-control:hover{background:var(--fc-paper,#f6f4ed);}
+#fcReading #fcMiniPlay{background:#45634f;color:#fffdf8;}
+#fcReading #fcMiniClose{width:30px;height:36px;color:var(--fc-muted,#6b736b);font-size:16px;}
+#fcReading .fc-mini-progress{position:absolute;bottom:0;left:0;width:100%;height:2px;background:var(--fc-line,#d9ded2);}
+#fcReading .fc-mini-progress span{display:block;width:100%;height:100%;transform:scaleX(0);transform-origin:left;background:var(--fc-green,#45634f);}
+#fcReading .fc-read-loading{position:absolute;top:10px;left:50%;transform:translateX(-50%);padding:7px 14px;border:1px solid var(--fc-line,#d9ded2);border-radius:20px;background:var(--fc-surface,#fffdf8);font-size:12px;box-shadow:0 3px 12px #0001;}
+#fcReading .fc-read-loading[hidden]{display:none;}
+@media(max-width:768px){
+ #fcReadAlongTrigger{top:calc(16px + env(safe-area-inset-top,0px));right:16px;min-height:40px;padding:0 13px;font-size:12px;background:#182b24d9;}
+ #fcReading .fc-reading-dock{padding:8px 10px calc(8px + env(safe-area-inset-bottom,0px));}
+ #fcReading .fc-mini-player{gap:8px;padding:10px;border-radius:12px;}
+ #fcReading .fc-mini-cover{width:40px;height:40px;}
+ #fcReading .fc-mini-control{width:36px;height:36px;font-size:13px;}
+ #fcReading .fc-mini-artist{max-width:95px;}
+ #fcReading .fc-mini-tag{font-size:10px;}
+ #fcReading #fcMiniExpand{display:none;}
+ #fcReading .fc-mini-song{font-size:13px;}
+}
+@media(max-width:359px){ #fcReading .fc-mini-tag{display:none;} #fcReading .fc-mini-player{gap:6px;padding:9px 8px;} }
