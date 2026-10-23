@@ -111,3 +111,16 @@ body.fc-journal-literary #article-container h2,body.fc-journal-literary #article
   #sidebar .author-avatar img,#sidebar img.avatar-img { box-shadow:none!important; border-color:var(--fc-line)!important; }
 }
 @media(prefers-reduced-motion:reduce) { *,*:before,*:after { animation:none!important; transition:none!important; scroll-behavior:auto!important; } }
+
+/* Film journal index, sharing the reading style of the rest of the site. */
+.fc-movie-index .fc-section-heading { margin-top: 0; }
+.fc-movie-index .fc-section-heading h1 { font-family: SimSun,serif; font-weight: 500; color: var(--fc-ink); }
+.fc-movie-index .fc-post-row { grid-template-columns: 100px minmax(0,1fr) auto; }
+.fc-movie-read,.fc-movie-archive { font-size: 13px; }
+.fc-movie-index .fc-film-meta { font-size: 12px; color: var(--fc-muted); margin-bottom: 8px; }
+.fc-movie-archive { margin: 28px 0 0; }
+@media(max-width:768px) {
+  .fc-movie-index .fc-post-row { grid-template-columns: 1fr; }
+  .fc-movie-index .fc-post-date { grid-column: auto; }
+  .fc-movie-read { margin-top: 8px; }
+}
