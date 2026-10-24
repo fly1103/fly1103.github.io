@@ -203,7 +203,7 @@ body.music-fullscreen .fc-cover-credit { display: none; }
   .article-sort .article-sort-item-title { color:var(--fc-ink); font-size:16px!important; line-height:1.65; }
   .article-sort-item-time { font-size:11px; }
 
-  #sidebar #sidebar-menus { width:min(84vw,320px)!important; min-width:0!important; min-height:0!important; height:100vh!important; height:100dvh!important; padding:33px 26px calc(24px + env(safe-area-inset-bottom,0px))!important; right:-100%!important; transform:none!important; visibility:hidden; border-radius:0!important; box-shadow:none!important; transition:right .25s ease,visibility 0s .25s; }
+  #sidebar #sidebar-menus { width:clamp(228px,66.667vw,288px)!important; min-width:0!important; min-height:0!important; height:100vh!important; height:100dvh!important; padding:33px 24px calc(24px + env(safe-area-inset-bottom,0px))!important; right:-100%!important; transform:none!important; visibility:hidden; border-radius:0!important; box-shadow:none!important; transition:right .25s ease,visibility 0s .25s; }
   #sidebar #sidebar-menus.open { right:0!important; transform:none!important; visibility:visible; transition:right .25s ease; }
   #sidebar #sidebar-menus>.avatar-img,#sidebar #sidebar-menus>.site-data,#sidebar #sidebar-menus>hr,#sidebar #sidebar-menus>.menus_items,#sidebar #sidebar-menus:after { display:none!important; }
   #sidebar .fc-mobile-nav { display:block; }
