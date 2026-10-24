@@ -138,3 +138,89 @@ body.music-fullscreen .fc-cover-credit { display: none; }
   body.fc-journal-section #page-site-info { top: 48%; }
   .fc-cover-credit { right: 16px; bottom: 12px; font-size: 9px; }
 }
+
+/* Mobile reading preview. Desktop styles and all cover metadata stay intact. */
+.fc-mobile-nav { display:none; }
+@media(max-width:768px) {
+  body:not(.music-fullscreen) #nav { padding:0 24px; }
+  body:not(.music-fullscreen) #nav a,body:not(.music-fullscreen) #nav i { color:var(--fc-ink)!important; text-shadow:none!important; }
+  body:not(.music-fullscreen) #nav .site-icon { width:30px; height:30px; }
+  body.fc-journal-home #page-header { height:60px!important; }
+  body.fc-journal-home #content-inner { padding:0 24px 28px; }
+  .fc-intro { display:block; padding:22px 0 25px; }
+  .fc-intro .fc-eyebrow,.fc-intro-art,.fc-picks { display:none; }
+  .fc-intro h1 { margin:0; font-size:27px; line-height:1.55; letter-spacing:1px; }
+  .fc-intro-desc { margin:12px 0 0; font-size:13px; line-height:1.85; }
+  .fc-intro-links { margin-top:17px; gap:23px; font-size:13px; }
+  .fc-intro-links .fc-primary { padding:0; background:none; color:var(--fc-green)!important; border-radius:0; }
+  .fc-note { display:block; padding:17px 0 18px; border:0; border-top:1px solid var(--fc-line); border-bottom:1px solid var(--fc-line); border-radius:0; background:none; }
+  .fc-note-label { display:flex; align-items:baseline; justify-content:space-between; gap:12px; }
+  .fc-note-label .fc-eyebrow { display:none; }
+  .fc-note-label h2 { margin:0; font:500 14px/1.6 system-ui,sans-serif; color:var(--fc-green); }
+  .fc-note-label>span { font-size:10px; color:var(--fc-muted); }
+  .fc-note-body { display:block; margin-top:10px; padding:0; border:0; }
+  .fc-note-body p { margin:0; font-size:15px; line-height:1.8; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+  .fc-note-body a { display:inline-block; margin-top:8px; font-size:11px; }
+  .fc-section-heading { margin:26px 0 5px; }
+  .fc-section-heading h2 { font-size:21px; }
+  .fc-section-heading a { font-size:11px; }
+  .fc-post-row { grid-template-columns:minmax(0,1fr); gap:6px; padding:20px 0; }
+  .fc-post-date { grid-column:auto; display:flex; align-items:center; gap:9px; font-size:11px; }
+  .fc-pinned { margin:0; font-size:10px; }
+  .fc-post-thumb,.fc-post-summary>.fc-eyebrow { display:none; }
+  .fc-post-summary h2 { margin:0 0 6px; font-size:19px; line-height:1.5; }
+  .fc-post-summary>p:not(.fc-eyebrow) { font-size:13px; line-height:1.8; }
+
+  body.fc-journal-post #page-header,body.fc-journal-section:not(.music-fullscreen) #page-header { height:auto!important; min-height:60px!important; background:var(--fc-paper)!important; }
+  body.fc-journal-post #page-header:before,body.fc-journal-section:not(.music-fullscreen) #page-header:before { display:none!important; }
+  body.fc-journal-post #post-info { padding:12px 0 22px; color:var(--fc-ink); }
+  body.fc-journal-post #page-header #post-info { position:relative; bottom:auto; padding:87px 24px 23px; text-align:left; }
+  body.fc-journal-post #post-info .post-title { margin:0; color:var(--fc-ink); font-size:28px!important; line-height:1.5; letter-spacing:.5px!important; text-shadow:none; overflow-wrap:anywhere; }
+  body.fc-journal-post #post-info #post-meta { margin-top:12px; color:var(--fc-muted); font-size:12px; line-height:1.7; }
+  body.fc-journal-post #post-info #post-meta a { color:var(--fc-muted); }
+  body.fc-journal-post #post-info #post-meta .meta-firstline { display:flex; gap:10px; flex-wrap:wrap; }
+  body.fc-journal-post #post-info #post-meta .meta-secondline,body.fc-journal-post #post-info #post-meta .post-meta-icon,body.fc-journal-post #post-info #post-meta .post-meta-label,body.fc-journal-post #post-info #post-meta .post-meta-separator,body.fc-journal-post #post-info #post-meta .post-meta-date-updated { display:none; }
+  body.fc-journal-post #content-inner { padding:0 0 28px; }
+  body.fc-journal-post #post { width:100%; padding:8px 24px 30px; border:0!important; border-radius:0!important; background:var(--fc-paper)!important; }
+  body.fc-journal-post #article-container { font-size:17px; line-height:1.95; }
+  body.fc-journal-post #article-container>h2:first-child,body.fc-journal-post #article-container>h3:first-child { margin-top:0; }
+  body:not(.music-fullscreen) #aside-content .card-widget:not(#card-toc) { display:none; }
+  body.fc-journal-post .relatedPosts,body.fc-journal-post .social-share { display:none; }
+  body.fc-journal-post #pagination .post-bg { display:none; }
+
+  body.fc-journal-section:not(.music-fullscreen) #page-header #page-site-info { position:relative!important; top:auto!important; transform:none!important; padding:88px 24px 22px; }
+  body.fc-journal-section:not(.music-fullscreen) #page-header #site-title { color:var(--fc-ink); font-size:27px; line-height:1.5; text-align:left; letter-spacing:1px!important; text-shadow:none!important; }
+  body:not(.music-fullscreen) .fc-cover-credit { display:none; }
+  body.fc-journal-section:not(.music-fullscreen) #content-inner { padding:0 24px 30px; }
+  body.fc-journal-section:not(.music-fullscreen) #page,body.fc-journal-section:not(.music-fullscreen) #archive,body.fc-journal-section:not(.music-fullscreen) #category,body.fc-journal-section:not(.music-fullscreen) #tag { padding:12px 0 24px; border:0!important; background:var(--fc-paper)!important; }
+  .article-sort { margin-left:0; padding-left:0; border-left:0; }
+  .article-sort-title { margin-left:0; padding-left:0; padding-bottom:12px; font-size:16px; color:var(--fc-muted); }
+  .article-sort-title:before,.article-sort-title:after,.article-sort-item:before,.article-sort-item-time i { display:none; }
+  .article-sort-item-img { display:none; }
+  .article-sort-item { height:auto!important; margin:0 0 22px; }
+  .article-sort-item.year { margin:26px 0 18px; font-size:19px; }
+  .article-sort-item-info { width:100%!important; padding:0!important; }
+  .article-sort .article-sort-item-title { color:var(--fc-ink); font-size:16px!important; line-height:1.65; }
+  .article-sort-item-time { font-size:11px; }
+
+  #sidebar #sidebar-menus { width:min(84vw,320px)!important; min-width:0!important; min-height:0!important; height:100vh!important; height:100dvh!important; padding:33px 26px calc(24px + env(safe-area-inset-bottom,0px))!important; right:-100%!important; transform:none!important; visibility:hidden; border-radius:0!important; box-shadow:none!important; transition:right .25s ease,visibility 0s .25s; }
+  #sidebar #sidebar-menus.open { right:0!important; transform:none!important; visibility:visible; transition:right .25s ease; }
+  #sidebar #sidebar-menus>.avatar-img,#sidebar #sidebar-menus>.site-data,#sidebar #sidebar-menus>hr,#sidebar #sidebar-menus>.menus_items,#sidebar #sidebar-menus:after { display:none!important; }
+  #sidebar .fc-mobile-nav { display:block; }
+  #sidebar .fc-mobile-brand { margin:0 0 28px; font:500 22px/1.4 Georgia,serif; color:var(--fc-ink); }
+  #sidebar .fc-mobile-links { display:flex; flex-direction:column; gap:2px; }
+  #sidebar .fc-mobile-links>a,#sidebar .fc-mobile-more summary { display:block; padding:12px 0; color:var(--fc-ink); font-size:16px; line-height:1.6; }
+  #sidebar .fc-mobile-more { margin-top:13px; border-top:1px solid var(--fc-line); padding-top:8px; }
+  #sidebar .fc-mobile-more summary { cursor:pointer; font-size:14px; color:var(--fc-muted); list-style:none; }
+  #sidebar .fc-mobile-more summary::-webkit-details-marker { display:none; }
+  #sidebar .fc-mobile-more summary:after { content:'＋'; float:right; }
+  #sidebar .fc-mobile-more[open] summary:after { content:'−'; }
+  #sidebar .fc-mobile-more a { display:block; padding:10px 0; font-size:14px; color:var(--fc-ink); }
+  #sidebar #fcMobileTheme { margin-top:25px; padding:9px 0; border:0; background:none; color:var(--fc-muted); font:12px system-ui,sans-serif; cursor:pointer; }
+  #live2d-widget { display:none!important; }
+  #rightside-config-hide,#rightside-config,#rightside #to_comment,#rightside #chat-btn { display:none!important; }
+  #rightside { right:12px; bottom:16px; }
+  #rightside #go-up,#rightside #mobile-toc-button { width:32px; height:32px; margin-top:6px; border:1px solid var(--fc-line); border-radius:50%; background:var(--fc-paper); color:var(--fc-muted); font-size:12px; box-shadow:none; }
+  #footer { margin-top:24px; }
+  #footer #footer-wrap { padding:22px 18px; font-size:11px; line-height:1.8; }
+}

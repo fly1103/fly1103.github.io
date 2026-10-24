@@ -1,5 +1,10 @@
 (function () {
   function init() {
+    const themeButton = document.getElementById('fcMobileTheme')
+    if (themeButton && !themeButton.dataset.bound) {
+      themeButton.dataset.bound = 'true'
+      themeButton.addEventListener('click', () => document.getElementById('darkmode')?.click())
+    }
     const article = document.querySelector('.fc-carnet #article-container')
     if (!article || article.querySelector('.fc-carnet-nav')) return
     const headings = Array.from(article.querySelectorAll('h2'))
