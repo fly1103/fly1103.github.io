@@ -1,5 +1,5 @@
 (function () {
-  window.fcInitReadAlong = function ({ audio, getTrack, next, closeDrawer }) {
+  window.fcInitReadAlong = function ({ audio, getTrack, next, closeDrawer, selectSong }) {
     const trigger = document.getElementById('fcReadAlongTrigger')
     const reader = document.getElementById('fcReading')
     const frame = document.getElementById('fcReadFrame')
@@ -45,6 +45,13 @@
       document.body.classList.remove('fc-reading')
       trigger.setAttribute('aria-expanded', 'false')
       trigger.focus({ preventScroll: true })
+    }
+    // Desk links work as soon as the reader DOM is ready, even while images load.
+    window.fcReadAlongSelectSong = name => {
+      if (reader.hidden || !selectSong) return false
+      selectSong(name)
+      music()
+      return true
     }
     trigger.addEventListener('click', () => {
       closeDrawer()
@@ -95,6 +102,8 @@
           const target = new URL(link.href, doc.baseURI)
           if (target.origin === window.location.origin && /^\/music\/?$/.test(target.pathname)) {
             event.preventDefault()
+            const song = target.searchParams.get('song')
+            if (song && selectSong) selectSong(song)
             music()
           }
         }, true)

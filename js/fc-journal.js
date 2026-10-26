@@ -5,6 +5,24 @@
       themeButton.dataset.bound = 'true'
       themeButton.addEventListener('click', () => document.getElementById('darkmode')?.click())
     }
+    document.querySelectorAll('.fc-desk-item,.fc-reading-trail a').forEach(link => {
+      if (link.dataset.readerBound) return
+      link.dataset.readerBound = 'true'
+      link.addEventListener('click', event => {
+        if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || window.parent === window) return
+        const target = new URL(link.href)
+        const song = target.searchParams.get('song')
+        if (target.origin !== location.origin || !/^\/music\/?$/.test(target.pathname) || !song) return
+        try {
+          if (window.parent.fcReadAlongSelectSong?.(song)) event.preventDefault()
+        } catch (_) {}
+      })
+    })
+    const currentSection = document.body.classList.contains('fc-journal-post') ? '/archives/' : location.pathname
+    document.querySelectorAll('.fc-mobile-links>a').forEach(link => {
+      if (new URL(link.href).pathname === currentSection) link.setAttribute('aria-current', 'true')
+      else link.removeAttribute('aria-current')
+    })
     const article = document.querySelector('.fc-carnet #article-container')
     if (!article || article.querySelector('.fc-carnet-nav')) return
     const headings = Array.from(article.querySelectorAll('h2'))

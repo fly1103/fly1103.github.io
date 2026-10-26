@@ -224,3 +224,83 @@ body.music-fullscreen .fc-cover-credit { display: none; }
   #footer { margin-top:24px; }
   #footer #footer-wrap { padding:22px 18px; font-size:11px; line-height:1.8; }
 }
+
+
+/* Dusk desk: small, mobile-only details around the existing reading layout. */
+.fc-mobile-wordmark,.fc-desk,.fc-reading-trail { display:none; }
+@media(max-width:768px) {
+  :root { --fc-desk-note:#eeeade; --fc-desk-soft:#e7e9df; }
+  [data-theme='dark'] { --fc-desk-note:#2d332b; --fc-desk-soft:#333d32; }
+  body:not(.music-fullscreen) #blog-info>a { display:inline-flex; align-items:center; gap:9px; }
+  body:not(.music-fullscreen) #nav .fc-mobile-wordmark { display:inline; font:500 17px/1.2 Georgia,serif; letter-spacing:.2px; color:var(--fc-ink); }
+  body.fc-journal-home #content-inner { padding-inline:24px; }
+  .fc-intro { position:relative; padding:8px 0 24px; isolation:isolate; }
+  .fc-intro .fc-eyebrow { display:block; margin:0 0 11px; color:var(--fc-rust); font-size:10px; font-weight:500; letter-spacing:2px; }
+  .fc-intro h1 { margin:0; font-size:28px; line-height:1.5; letter-spacing:.5px; }
+  .fc-intro-desc { max-width:100%; padding-right:101px; margin:11px 0 0; font-size:13px; line-height:1.8; }
+  .fc-intro-links { gap:22px; margin-top:12px; font-size:12px; min-height:28px; }
+  .fc-intro-links a { padding-block:6px!important; }
+  .fc-intro-art { display:block; position:absolute; right:0; bottom:30px; width:78px; height:94px; margin:0; border-radius:42px 42px 3px 3px; background:linear-gradient(180deg,#dce0ce 0%,#ead8b6 70%,#bdc5ad 71%); box-shadow:0 0 0 5px var(--fc-paper),0 0 0 6px var(--fc-line); }
+  .fc-intro-art .fc-sun { width:25px; height:25px; top:33px; right:18px; box-shadow:none; }
+  .fc-intro-art .fc-horizon { bottom:-33px; left:-30px; width:150px; height:65px; background:#526d58; transform:rotate(-15deg); }
+  .fc-intro-art span { display:none; }
+  [data-theme='dark'] .fc-intro-art { background:linear-gradient(180deg,#435247,#746750 72%,#3f5144 73%); }
+  [data-theme='dark'] .fc-intro-art .fc-sun { background:#d9c6a0; }
+  .fc-note { position:relative; padding:15px 18px 14px; background:var(--fc-desk-note); border:0; border-radius:3px 12px 12px 3px; }
+  .fc-note:before { content:''; position:absolute; left:0; top:20px; bottom:20px; width:2px; background:var(--fc-rust); opacity:.8; }
+  .fc-note-label { gap:8px; }
+  .fc-note-label h2 { font-size:12px; letter-spacing:.5px; }
+  .fc-note-label>span { font-size:10px; font-variant-numeric:tabular-nums; }
+  .fc-note-body { margin-top:12px; }
+  .fc-note-body p { font-family:"Songti SC","Noto Serif CJK SC",SimSun,serif; font-size:16px; line-height:1.85; }
+  .fc-note-body a { display:inline-block; margin-top:9px; padding:4px 0; font-size:11px; }
+  .fc-desk { display:block; margin:20px 0 21px; }
+  .fc-desk-heading { display:flex; align-items:center; gap:9px; margin-bottom:8px; }
+  .fc-desk-heading h2 { margin:0; color:var(--fc-muted); font:400 11px/1.5 system-ui,sans-serif; letter-spacing:1.3px; }
+  .fc-desk-heading:after { content:''; width:24px; height:1px; background:var(--fc-line); }
+  .fc-desk-items { display:grid; grid-template-columns:1fr 1fr; gap:0; }
+  .fc-desk-item { display:grid; grid-template-columns:29px minmax(0,1fr) 10px; align-items:center; gap:9px; min-height:53px; padding:6px 11px 6px 0; color:var(--fc-ink); }
+  .fc-desk-item+.fc-desk-item { border-left:1px solid var(--fc-line); padding-left:14px; padding-right:0; }
+  .fc-desk-symbol { width:28px; height:36px; display:grid; place-items:center; color:var(--fc-green); background:var(--fc-desk-soft); border:1px solid var(--fc-line); border-radius:1px 3px 3px 1px; box-shadow:inset 3px 0 0 var(--fc-paper); }
+  .fc-desk-symbol svg { width:16px; height:16px; }
+  .fc-desk-symbol.is-music { height:28px; border-radius:50%; box-shadow:none; background:transparent; color:var(--fc-rust); }
+  .fc-desk-item small { display:block; color:var(--fc-muted); font-size:10px; line-height:1.7; font-weight:400; }
+  .fc-desk-item strong { display:block; margin-top:2px; color:var(--fc-ink); font-size:14px; line-height:1.5; font-weight:500; overflow-wrap:anywhere; }
+  .fc-desk-arrow { color:var(--fc-muted); font-size:11px; }
+  .fc-home>.fc-section-heading { margin:0 0 5px; padding-top:19px; border-top:1px solid var(--fc-line); }
+  .fc-section-heading h2 { font-size:22px; letter-spacing:.5px; }
+  .fc-post-row { gap:8px; padding:21px 0 23px; }
+  .fc-post-date { font-size:10px; letter-spacing:.3px; }
+  .fc-pinned { font-size:10px; }
+  .fc-post-summary>.fc-eyebrow { display:block; margin:0 0 5px; font-size:10px; font-weight:400; letter-spacing:1px; color:var(--fc-green); }
+  .fc-post-summary h2 { margin-bottom:7px; font-family:"Songti SC","Noto Serif CJK SC",SimSun,serif; font-size:22px; line-height:1.5; font-weight:500; }
+  .fc-post-summary>p:not(.fc-eyebrow) { font-size:13px; line-height:1.85; }
+  body.fc-journal-post #post-info .post-title { font-size:29px!important; line-height:1.55; }
+  body.fc-journal-post #post-info:after { content:''; display:block; width:27px; height:2px; margin-top:23px; background:var(--fc-rust); }
+  body.fc-journal-literary #article-container h2 { font-size:23px; line-height:1.6; }
+  body.fc-journal-literary #article-container blockquote { margin:1.6em 0; padding:16px 18px; background:var(--fc-desk-note); border-left:2px solid var(--fc-rust); color:var(--fc-ink); border-radius:0 8px 8px 0; }
+  .fc-reading-trail { display:block; margin:36px 0 28px; padding:20px 0 0; border-top:1px solid var(--fc-line); }
+  .fc-reading-trail>p { margin:0 0 12px; color:var(--fc-muted); font:400 11px/1.6 system-ui,sans-serif; letter-spacing:1.5px; }
+  .fc-reading-trail>div { display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  .fc-reading-trail a { display:inline-block; padding:9px 0; font-size:13px; color:var(--fc-green); }
+  #sidebar .fc-mobile-links>a { position:relative; }
+  #sidebar .fc-mobile-links>a[aria-current] { color:var(--fc-green); }
+  #sidebar .fc-mobile-links>a[aria-current]:after { content:''; position:absolute; right:0; top:50%; width:15px; height:2px; background:var(--fc-green); }
+  body.fc-carnet #article-container>h2 { font-family:"Songti SC","Noto Serif CJK SC",SimSun,serif; font-size:24px; font-weight:500; }
+  body.fc-carnet #article-container>h3 { margin-top:29px; font-size:13px; font-weight:500; letter-spacing:.8px; }
+  body.fc-carnet .fc-carnet-nav { gap:8px; padding-bottom:10px; }
+  body.fc-carnet .fc-carnet-nav a { border:0; border-bottom:1px solid var(--fc-line); border-radius:0; padding:6px 0; margin-right:9px; font-size:12px; }
+  body.fc-journal-section:not(.music-fullscreen) #page-header #page-site-info:after { content:''; display:block; width:27px; height:2px; margin-top:18px; background:var(--fc-rust); }
+  .fc-desk-item:active { opacity:.7; }
+}
+@media(max-width:359px) {
+  .fc-intro h1 { font-size:25px; }
+  .fc-intro-desc { padding-right:85px; }
+  .fc-intro-art { width:62px; height:82px; }
+  .fc-desk-item { grid-template-columns:22px minmax(0,1fr) 8px; gap:6px; }
+  .fc-desk-symbol { width:22px; height:30px; }
+  .fc-desk-symbol.is-music { height:22px; }
+  .fc-desk-item+.fc-desk-item { padding-left:10px; }
+  .fc-desk-item strong { font-size:13px; }
+  .fc-note-label { flex-wrap:wrap; gap:3px 12px; }
+}
