@@ -1,4 +1,15 @@
 (function () {
+  function createContentReady(host, frame, loading, onReady) {
+    return doc => {
+      try {
+        if (!doc || doc !== frame.contentDocument || doc.defaultView.location.origin !== host.defaultView.location.origin || !doc.getElementById('content-inner')) return false
+      } catch (_) { return false }
+      // The reading surface exists; images and optional scripts may still be pending.
+      loading.hidden = true
+      onReady(doc)
+      return true
+    }
+  }
   // Both documents keep their own CSS variables; synchronize their theme roots.
   function connectThemes(host, frame) {
     let child = null
@@ -28,7 +39,7 @@
       return true
     }
   }
-  if (typeof module !== 'undefined' && module.exports) module.exports = { connectThemes }
+  if (typeof module !== 'undefined' && module.exports) module.exports = { connectThemes, createContentReady }
   if (typeof window === 'undefined') return
   window.fcInitReadAlong = function ({ audio, getTrack, next, closeDrawer, selectSong }) {
     const trigger = document.getElementById('fcReadAlongTrigger')
@@ -46,6 +57,7 @@
     let lastUrl = '/'
     let readerPosition = 0
     window.fcReadAlongThemeReady = connectThemes(document, frame)
+    window.fcReadAlongContentReady = createContentReady(document, frame, loading, window.fcReadAlongThemeReady)
     document.body.append(trigger, reader)
 
     function sync() {
