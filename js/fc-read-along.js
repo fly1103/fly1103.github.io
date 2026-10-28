@@ -1,4 +1,35 @@
 (function () {
+  // Both documents keep their own CSS variables; synchronize their theme roots.
+  function connectThemes(host, frame) {
+    let child = null
+    let childObserver = null
+    const mode = doc => doc.documentElement.getAttribute('data-theme')
+    const apply = (doc, value) => {
+      if (!doc || !['light', 'dark'].includes(value) || mode(doc) === value) return
+      const activate = doc.defaultView?.[value === 'dark' ? 'activateDarkMode' : 'activateLightMode']
+      if (typeof activate === 'function') activate()
+      else doc.documentElement.setAttribute('data-theme', value)
+    }
+    const hostObserver = new MutationObserver(() => {
+      try { if (child === frame.contentDocument) apply(child, mode(host)) } catch (_) {}
+    })
+    hostObserver.observe(host.documentElement, { attributes: true, attributeFilter: ['data-theme'] })
+    return doc => {
+      // Only the actual same-origin reading frame can join this bridge.
+      try {
+        if (!doc || doc !== frame.contentDocument || doc.defaultView.location.origin !== host.defaultView.location.origin) return false
+      } catch (_) { return false }
+      if (doc === child) return true
+      childObserver?.disconnect()
+      child = doc
+      apply(child, mode(host))
+      childObserver = new MutationObserver(() => apply(host, mode(child)))
+      childObserver.observe(child.documentElement, { attributes: true, attributeFilter: ['data-theme'] })
+      return true
+    }
+  }
+  if (typeof module !== 'undefined' && module.exports) module.exports = { connectThemes }
+  if (typeof window === 'undefined') return
   window.fcInitReadAlong = function ({ audio, getTrack, next, closeDrawer, selectSong }) {
     const trigger = document.getElementById('fcReadAlongTrigger')
     const reader = document.getElementById('fcReading')
@@ -14,6 +45,7 @@
     let initialized = false
     let lastUrl = '/'
     let readerPosition = 0
+    window.fcReadAlongThemeReady = connectThemes(document, frame)
     document.body.append(trigger, reader)
 
     function sync() {
@@ -89,6 +121,7 @@
         const doc = frame.contentDocument
         const url = new URL(frame.contentWindow.location.href)
         if (url.origin !== window.location.origin) return
+        window.fcReadAlongThemeReady(doc)
         if (/^\/music\/?$/.test(url.pathname)) { music(); return }
         lastUrl = url.pathname + url.search + url.hash
         readerPosition = 0

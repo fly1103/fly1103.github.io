@@ -1,5 +1,9 @@
 (function () {
   function init() {
+    // Attach before images finish loading, so a quick theme switch reaches the player.
+    if (window.parent !== window) {
+      try { window.parent.fcReadAlongThemeReady?.(document) } catch (_) {}
+    }
     const themeButton = document.getElementById('fcMobileTheme')
     if (themeButton && !themeButton.dataset.bound) {
       themeButton.dataset.bound = 'true'
