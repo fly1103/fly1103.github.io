@@ -12,6 +12,12 @@
     return String(Math.floor(value / 60)).padStart(2, '0') + ':' + String(value % 60).padStart(2, '0')
   }
 
+  function lyricRequestUrl(url) {
+    // Use a stable new cache key for public Qiniu lyrics with stale CORS headers.
+    // Preserve signed/query URLs and same-origin preview copies verbatim.
+    return /^https:\/\/img\.flying-cat\.cn\/[^?#]+$/i.test(url) ? url + '?fc_lyrics=1' : url
+  }
+
   function parseLrc(text) {
     const lines = []
     String(text).replace(/^\uFEFF/, '').split(/\r?\n/).forEach(line => {
@@ -130,7 +136,7 @@
       lyricAbort = controller
       const timer = env.setTimeout(() => controller.abort(), 12000)
       try {
-        const response = await env.fetch(url, { signal: controller.signal })
+        const response = await env.fetch(lyricRequestUrl(url), { signal: controller.signal })
         if (version !== lyricVersion) return
         if (response.status === 404) { lyricState = 'missing'; updateLyric(); return }
         if (!response.ok) throw new Error('Lyric request failed')
@@ -293,5 +299,5 @@
       selectSong: name => { const index = musicList.findIndex(item => item.name === name); if (index >= 0 && index !== currentIndex) loadTrack(index, !audio.paused) } })
     return { audio }
   }
-  return { init, parseLrc, formatTime, readSaved, initialSelection, STORAGE_KEY }
+  return { init, parseLrc, formatTime, lyricRequestUrl, readSaved, initialSelection, STORAGE_KEY }
 })
