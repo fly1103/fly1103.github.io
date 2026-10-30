@@ -33,3 +33,21 @@
 .fc-plan-document .wl-badge { color:var(--fc-green); border-color:var(--fc-line); }
 .fc-comment-error { padding:14px; border:1px solid var(--fc-line); color:var(--fc-muted); font-size:13px; }
 @media(max-width:600px){ .fc-comment-surface .wl-header { flex-direction:column; gap:0; } .fc-comment-surface .wl-header-item { flex:initial; width:100%; padding:4px 0; } .fc-plan-comments .wl-card { padding-left:12px; } .fc-plan-comments .wl-content { padding:14px; } .fc-plan-description { font-size:14px; } }
+
+.fc-login-dialog { box-sizing:border-box; width:min(400px,calc(100vw - 32px)); max-height:calc(100dvh - 40px); padding:28px; border:1px solid var(--fc-line); border-radius:12px; background:var(--fc-surface); color:var(--fc-ink); box-shadow:0 16px 64px #0003; overflow:auto; }
+.fc-login-dialog::backdrop { background:rgba(28,39,32,.48); }
+.fc-login-form { position:relative; display:flex; flex-direction:column; gap:8px; }
+.fc-login-close { position:absolute; right:-10px; top:-16px; width:44px; height:44px; font-size:28px; background:transparent; color:var(--fc-muted); border:0; cursor:pointer; }
+.fc-login-eyebrow { color:var(--fc-rust); font-size:11px; letter-spacing:2px; margin:0 0 8px; }
+.fc-login-dialog h2 { margin:0; color:var(--fc-ink); font:500 25px/1.5 Georgia,SimSun,serif; }
+.fc-login-description,.fc-login-footnote { color:var(--fc-muted); font-size:12px; line-height:1.8; margin:4px 0 12px; }
+.fc-login-form label { font-size:13px; margin-top:5px; }
+.fc-login-form input { box-sizing:border-box; width:100%; min-height:46px; padding:10px 12px; border:1px solid var(--fc-line); border-radius:5px; background:var(--fc-paper); color:var(--fc-ink); font:16px/1.5 system-ui; }
+.fc-login-form input:focus-visible { outline:2px solid var(--fc-green); outline-offset:2px; }
+.fc-login-form details { color:var(--fc-muted); font-size:12px; margin-top:8px; }
+.fc-login-form details label { display:block; }
+.fc-login-status { min-height:20px; color:var(--fc-rust); font-size:12px; line-height:1.7; margin:4px 0; }
+.fc-login-submit { min-height:46px; background:var(--fc-green); color:var(--fc-paper); border:1px solid var(--fc-green); border-radius:5px; font:inherit; cursor:pointer; }
+.fc-login-submit:disabled { opacity:.65; cursor:wait; }
+.fc-login-footnote { text-align:center; margin:6px 0 0; }
+@media(max-height:580px){.fc-login-dialog{padding:20px}.fc-login-description{margin-bottom:0}.fc-login-form{gap:5px}}
