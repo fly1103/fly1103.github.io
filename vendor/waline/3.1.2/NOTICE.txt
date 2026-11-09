@@ -1,0 +1,3 @@
+@waline/client 3.1.2 (MIT)
+Source: https://registry.npmjs.org/@waline/client/-/client-3.1.2.tgz
+Unmodified distribution files, served locally to avoid external CDN failures.
